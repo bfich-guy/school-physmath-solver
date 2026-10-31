@@ -1,3 +1,21 @@
+.formula-searching-input {
+    width: 50%;
+    height: fit-content;
+    align-self: center;
+    border: 4px solid gray;
+    padding: 16px;
+    margin-top: 1%;
+    font: normal 16px 'Arial';
+}
+
+.formula-searching-input::placeholder {
+    font: normal inherit 'Arial';
+}
+
+.formula-searching-input:focus {
+    outline: none;
+}
+
 .formulas-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -8,75 +26,76 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 4px solid lightgray;
-    border-radius: 16px;
+    border: 4px solid gray;
+    margin: 4%;
     background-color: white;
-    margin: 2% 2%;
+    
 }
 
 .formula-name {
     color: black;
-    font: bold 24px 'Franklin Gothic Medium';
+    font: bold 24px 'Arial';
     text-align: center;
+    width: 75%;
 }
 
 .formula-object {
-    border: 4px solid gray;
-    border-radius: 16px;
-    font: bold 24px 'Franklin Gothic Medium';
+    font: bold 24px 'Arial';
     text-align: center;
-    width: auto;
+    width: 50%;
     padding: 16px;
+    color: black;
 }
 
-.formula-inputs-card {
+.formula-quantities-inputs-card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.formula-input-field {
-    border: 2px dashed gray;
-    width: 90%;
-    font: bold 16px 'Franklin Gothic Medium';
-    margin: 2% 2%;
+.formula-quantity-input-field {
+    width: auto;
+    font: bold 16px 'Arial';
     text-align: center;
+    color: black;
+    background-color: lightgray;
+    border: 1px solid black;
+    margin: 2% 2%;
 }
 
-.formula-buttons-card {
+.formula-quantity-input-field:focus {
+    outline: none;
+}
+
+.formula-quantities-buttons-card {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.formula-button {
+.formula-quantity-button {
     width: auto;
-    border: 2px dashed black;
-    background-color: white;
+    background-color: lightgray;
+    border: 1px solid black;
     color: black;
-    font: bold 16px 'Franklin Gothic Medium';
+    font: bold 24px 'Arial';
     transition: 0.1s;
     padding: 8px;
     margin: 4% 4%;
 }
 
-.formula-button:hover {
+.formula-quantity-button:hover {
     cursor: pointer;
-    border: 2px solid black;
-}
-
-.formula-button:active {
-    scale: 0.8;
+    border: 1px solid lightgray;
 }
 
 .formula-answer-field {
-    border: 4px solid gray;
-    border-radius: 16px;
     color: black;
-    background-color: white;
-    font: bold 16px 'Franklin Gothic Medium';
+    background-color: lightgray;
+    font: bold 16px 'Arial';
     margin: 2% 0;
     padding: 16px;
     text-align: center;
+    width: 75%;
 }
 
 @media (max-width: 768px) {

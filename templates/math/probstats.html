@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ТВиС | Физмат-калькулятор - научный калькулятор для школы по физике и математике
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', path='css/solver.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', path='css/formulas.css') }}">
+        <link rel="icon" type="image/x-icon" href="/static/images/school_physmath_solver_favicon.png">
+    </head>
+    <body>
+        <header>
+            <div class="solver-header-background">
+                <div class="solver-header-links">
+                    <a class="solver-header-link" href="/">
+                        Главная
+                    </a>
+                    <a class="solver-header-link" href="/math/algebra">
+                        Алгебра
+                    </a>
+                    <a class="solver-header-link" href="/math/geometry">
+                        Геометрия
+                    </a>
+                    <p class="solver-header-subject-title">
+                        ТВиС
+                    </p>
+                    <a class="solver-header-link" href="/physics/electromagnetics">
+                        Электромагнетизм
+                    </a>
+                    <a class="solver-header-link" href="/physics/mechanics">
+                        Механика
+                    </a>
+                    <a class="solver-header-link" href="/physics/thermodynamics">
+                        Термодинамика
+                    </a>
+                </div>
+                <div class="solver-header-subject-menu-card">
+                    <input id="formula-searching-input" class="formula-searching-input" type="text" placeholder="Введите то, что Вам нужно посчитать">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="solver-physmath-background">
+                <div id="formulas-grid" class="formulas-grid">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Факториал числа
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>f</mi>
+                                <mo>(</mo>
+                                <mi>x</mi>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mi>x</mi>
+                                <mo>!</mo>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="number-factorial-fn-input" type="text" class="formula-quantity-input-field" placeholder="f(x)">
+                            <input id="number-factorial-n-input" type="text" class="formula-quantity-input-field" placeholder="x">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="number-factorial-fn-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>f</mi>
+                                    <mo>(</mo>
+                                    <mi>x</mi>
+                                    <mo>)</mo>
+                                </math>
+                            </button>
+                            <button id="number-factorial-n-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>x</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="number-factorial-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Биноминальный коэффициент
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <msubsup>
+                                    <mi>C</mi>
+                                    <mi>n</mi>
+                                    <mi>k</mi>
+                                </msubsup>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>n</mi>
+                                        <mo>!</mo>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>k</mi>
+                                        <mo>!</mo>
+                                        <mo>(</mo>
+                                        <mi>n</mi>
+                                        <mo>−</mo>
+                                        <mi>k</mi>
+                                        <mo>)</mo>
+                                        <mo>!</mo>
+                                    </mrow>
+                                </mfrac>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="binomial-coefficient-Ckn-input" type="text" class="formula-quantity-input-field" placeholder="Ckn">
+                            <input id="binomial-coefficient-nfct-input" type="text" class="formula-quantity-input-field" placeholder="n!">
+                            <input id="binomial-coefficient-kfct-input" type="text" class="formula-quantity-input-field" placeholder="k!">
+                            <input id="binomial-coefficient-nminuskfct-input" type="text" class="formula-quantity-input-field" placeholder="(n-k)!">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="binomial-coefficient-Ckn-button" class="formula-quantity-button">
+                                <math>
+                                    <msubsup>
+                                        <mi>C</mi>
+                                        <mi>n</mi>
+                                        <mi>k</mi>
+                                    </msubsup>
+                                </math>
+                            </button>
+                            <button id="binomial-coefficient-nfct-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>n</mi>
+                                    <mo>!</mo>
+                                </math>
+                            </button>
+                            <button id="binomial-coefficient-kfct-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>k</mi>
+                                    <mo>!</mo>
+                                </math>
+                            </button>
+                            <button id="binomial-coefficient-nminuskfct-button" class="formula-quantity-button">
+                                <math>
+                                    <mo>(</mo>
+                                    <mi>n</mi>
+                                    <mo>−</mo>
+                                    <mi>k</mi>
+                                    <mo>)</mo>
+                                    <mo>!</mo>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="binomial-coefficient-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Испытания Бернулли
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <msub>
+                                    <mi>P</mi>
+                                    <mi>n</mi>
+                                </msub>
+                                <mo>(</mo>
+                                <mi>k</mi>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <msubsup>
+                                    <mi>C</mi>
+                                    <mi>n</mi>
+                                    <mi>k</mi>
+                                </msubsup>
+                                <mo>⋅</mo>
+                                <msup>
+                                    <mi>p</mi>
+                                    <mi>k</mi>
+                                </msup>
+                                <mo>⋅</mo>
+                                <msup>
+                                    <mi>q</mi>
+                                    <mrow>
+                                        <mi>n</mi>
+                                        <mo>−</mo>
+                                        <mi>k</mi>
+                                    </mrow>
+                                </msup>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="bernoulli-probability-theory-Pnk-input" type="text" class="formula-quantity-input-field" placeholder="Pnk">
+                            <input id="bernoulli-probability-theory-Ckn-input" type="text" class="formula-quantity-input-field" placeholder="Ckn">
+                            <input id="bernoulli-probability-theory-p-input" type="text" class="formula-quantity-input-field" placeholder="p">
+                            <input id="bernoulli-probability-theory-q-input" type="text" class="formula-quantity-input-field" placeholder="q">
+                            <input id="bernoulli-probability-theory-k-input" type="text" class="formula-quantity-input-field" placeholder="k">
+                            <input id="bernoulli-probability-theory-n-input" type="text" class="formula-quantity-input-field" placeholder="n">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="bernoulli-probability-theory-Pnk-button" class="formula-quantity-button">
+                                <math>
+                                    <msub>
+                                        <mi>P</mi>
+                                        <mi>n</mi>
+                                    </msub>
+                                    <mo>(</mo>
+                                    <mi>k</mi>
+                                    <mo>)</mo>
+                                </math>
+                            </button>
+                            <button id="bernoulli-probability-theory-Ckn-button" class="formula-quantity-button">
+                                <math>
+                                    <msubsup>
+                                        <mi>C</mi>
+                                        <mi>n</mi>
+                                        <mi>k</mi>
+                                    </msubsup>
+                                </math>
+                            </button>
+                            <button id="bernoulli-probability-theory-p-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>p</mi>
+                                </math>
+                            </button>
+                            <button id="bernoulli-probability-theory-q-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>q</mi>
+                                </math>
+                            </button>
+                            <button id="bernoulli-probability-theory-k-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>k</mi>
+                                </math>
+                            </button>
+                            <button id="bernoulli-probability-theory-n-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>n</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="bernoulli-probability-theory-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Математическое ожидание
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>M</mi>
+                                <mo>(</mo>
+                                <mi>X</mi>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <msub>
+                                    <mi>p</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mo>…</mo>
+                                <mo>+</mo>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mi>n</mi>
+                                </msub>
+                                <msub>
+                                    <mi>p</mi>
+                                    <mi>n</mi>
+                                </msub>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="expected-value-x-input" type="text" class="formula-quantity-input-field" placeholder="x">
+                            <input id="expected-value-p-input" type="text" class="formula-quantity-input-field" placeholder="p">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="expected-value-MX-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>M</mi>
+                                    <mo>(</mo>
+                                    <mi>X</mi>
+                                    <mo>)</mo>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="expected-value-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="solver-footer-background">
+                <div class="solver-footer-column">
+                    <p class="solver-footer-column-title">
+                        Навигация
+                    </p>
+                    <div class="solver-footer-widgets">
+                        <a class="solver-footer-link" href="/">
+                            Главная
+                        </a>
+                        <a class="solver-footer-link" href="/math/algebra">
+                            Алгебра
+                        </a>
+                        <a class="solver-footer-link" href="/math/geometry">
+                            Геометрия
+                        </a>
+                        <a class="solver-footer-link" href="/physics/electromagnetics">
+                            Электромагнетизм
+                        </a>
+                        <a class="solver-footer-link" href="/physics/mechanics">
+                            Механика
+                        </a>
+                        <a class="solver-footer-link" href="/physics/thermodynamics">
+                            Термодинамика
+                        </a>
+                    </div>
+                </div>
+                <div class="solver-footer-column">
+                    <p class="solver-footer-column-title">
+                        Информация
+                    </p>
+                    <div class="solver-footer-widgets">
+                        <p class="solver-copyright-text">
+                            © Copyright 2026 bfich-guy
+                        </p>
+                        <p class="solver-copyright-text">
+                            Все права защищены
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="/static/js/calculateformula.js" type="module"></script>
+        <script src="/static/js/searchingformula.js" type="module"></script>
+    </body>
+</html>

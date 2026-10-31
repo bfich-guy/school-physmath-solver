@@ -281,4 +281,232 @@ class FigureAreaBySimilarityCoefficientTheorem:
         k: Decimal = (S2 / S1).sqrt()
         return k
 
+
+class PolygonAnglesSumTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_S(self, *, n: Decimal) -> Decimal:
+        S: Decimal = (n - Decimal("2")) * Decimal("180")
+        return S
+
+
+    def get_n(self, *, S: Decimal) -> Decimal:
+        n: Decimal = (S / Decimal("180")) + Decimal("2")
+        return n
+
+
+class RegularPolygonAngleTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_a(self, *, n: Decimal) -> Decimal:
+        a: Decimal = Decimal("180") - (Decimal("360") / n)
+        return a
+
+
+    def get_n(self, *, a: Decimal) -> Decimal:
+        n: Decimal = Decimal("360") / (Decimal("180") - a)
+        return n
+
+
+class RegularPolygonAreaByCircumscripedCircleTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_S(self, *, n: Decimal, a: Decimal, R: Decimal) -> Decimal:
+        S: Decimal = n * a * (R ** Decimal("2") - Decimal("0.25") * (a ** Decimal("2") / Decimal("4"))).sqrt()
+        return S
+
+
+    def get_n(self, *, S: Decimal, a: Decimal, R: Decimal) -> Decimal:
+        n: Decimal = S / (a * (R ** Decimal("2") - Decimal("0.25") * (a ** Decimal("2") / Decimal("4"))).sqrt())
+        return n
+
+
+    def get_a(self, *, S: Decimal, n: Decimal, R: Decimal) -> list[Decimal]:
+        a: list[Decimal] = get_quadratic_equation_roots(a=-(n ** Decimal("2")), b=((n * R) ** Decimal("2")), c=(Decimal("4") * S ** Decimal("2")), mode="POSITIVE")
+        return a
+
+    def get_R(self, *, S: Decimal, n: Decimal, a: Decimal) -> Decimal:
+        R: Decimal = ((Decimal("4") * S ** Decimal("2") - n ** Decimal("2") * a ** Decimal("4")) / ((n * a) * Decimal("2"))).sqrt()
+        return R
+
+    
+class RegularPolygonPerimeterTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_P(self, *, a: Decimal, n: Decimal) -> Decimal:
+        P: Decimal = a * n
+        return P
+
+
+    def get_a(self, *, P: Decimal, n: Decimal) -> Decimal:
+        a: Decimal = P / n
+        return a
+
+
+    def get_n(self, *, P: Decimal, a: Decimal) -> Decimal:
+        n: Decimal = P / a
+        return n
+
+#endregion
+
+
+#region Stereometry
+
+class PrismAreaTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_S(self, *, Sb: Decimal, Ss: Decimal) -> Decimal:
+        S: Decimal = Decimal("2") * Sb + Ss
+        return S
+
+
+    def get_Sb(self, *, S: Decimal, Ss: Decimal) -> Decimal:
+        Sb: Decimal = (S - Ss) / Decimal("2")
+        return Sb
+
+
+    def get_Ss(self, *, S: Decimal, Sb: Decimal) -> Decimal:
+        Ss: Decimal = S - Decimal("2") * Sb
+        return Ss
+
+
+class PrismVolumeTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_V(self, *, Sb: Decimal, h: Decimal) -> Decimal:
+        V: Decimal = Sb * h
+        return V
+
+
+    def get_Sb(self, *, V: Decimal, h: Decimal) -> Decimal:
+        Sb: Decimal = V / h
+        return Sb
+
+
+    def get_h(self, *, V: Decimal, Sb: Decimal) -> Decimal:
+        h: Decimal = V / Sb
+        return h
+
+
+class CylinderAreaTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_S(self, *, pi: Decimal, R: Decimal, h: Decimal) -> Decimal:
+        S: Decimal = Decimal("2") * pi * R * (R + h)
+        return S
+
+
+    def get_R(self, *, S: Decimal, pi: Decimal, h: Decimal) -> list[Decimal]:
+        R: list[Decimal] = get_quadratic_equation_roots(a=(Decimal("2") * pi), b=(Decimal("2") * pi * h), c=-S, mode="POSITIVE")
+        return R
+
+
+    def get_h(self, *, S: Decimal, pi: Decimal, R: Decimal) -> Decimal:
+        h: Decimal = S / (Decimal("2") * pi * R) - R
+        return h
+
+
+class CylinderVolumeTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_V(self, *, pi: Decimal, R: Decimal, h: Decimal) -> Decimal:
+        V: Decimal = pi * R ** Decimal("2") * h
+        return V
+
+
+    def get_R(self, *, V: Decimal, pi: Decimal, h: Decimal) -> Decimal:
+        R: Decimal = (V / (pi * h)).sqrt()
+        return R
+
+
+    def get_h(self, *, V: Decimal, pi: Decimal, R: Decimal) -> Decimal:
+        h: Decimal = V / (pi * R ** Decimal("2"))
+        return h
+
+
+class ConeAreaTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_S(self, *, pi: Decimal, R: Decimal, l: Decimal) -> Decimal:
+        S: Decimal = pi * R * (R + l)
+        return S
+        
+
+    def get_R(self, *, S: Decimal, pi: Decimal, l: Decimal) -> list[Decimal]:
+        R: list[Decimal] = get_quadratic_equation_roots(a=pi, b=(pi * l), c=-S, mode="POSITIVE")
+        return R
+
+
+    def get_l(self, *, S: Decimal, pi: Decimal, R: Decimal) -> Decimal:
+        l: Decimal = S / (pi * R) - R
+        return l
+    
+
+class ConeVolumeTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_V(self, *, pi: Decimal, R: Decimal, h: Decimal) -> Decimal:
+        V: Decimal = (pi * R ** Decimal("2") * h) / Decimal("3")
+        return V
+        
+
+    def get_R(self, *, V: Decimal, pi: Decimal, h: Decimal) -> Decimal:
+        R: Decimal = ((Decimal("3") * V) / (pi * h)).sqrt()
+        return R
+
+
+    def get_h(self, *, V: Decimal, pi: Decimal, R: Decimal) -> Decimal:
+        h: Decimal = (Decimal("3") * V) / (pi * R ** Decimal("2"))
+        return h
+    
+
+class SphereAreaTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_S(self, *, pi: Decimal, R: Decimal) -> Decimal:
+        S: Decimal = Decimal("4") * pi * R ** Decimal("2")
+        return S
+
+
+    def get_R(self, *, S: Decimal, pi: Decimal) -> Decimal:
+        R: Decimal = (S / (Decimal("4") * pi)).sqrt()
+        return R
+
+    
+class SphereVolumeTheorem:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_V(self, *, pi: Decimal, R: Decimal) -> Decimal:
+        V: Decimal = (Decimal("4") * pi * R ** Decimal("3")) / Decimal("3")
+        return V
+
+
+    def get_R(self, *, V: Decimal, pi: Decimal) -> Decimal:
+        R: Decimal = pow(((Decimal("3") * V) / (Decimal("4") * pi)), Decimal("1") / Decimal("3")).quantize(Decimal("1"))
+        return R
+
 #endregion

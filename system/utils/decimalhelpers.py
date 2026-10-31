@@ -40,6 +40,68 @@ def decimal_scalar(decimal_numbers: list[Decimal] | tuple[Decimal], scalar_value
     return decimal_scalar
 
 
+def decimal_factorial(decimal_number: Decimal) -> Decimal:
+    decimal_number_is_not_natural: bool = decimal_number < Decimal("1") or decimal_number % Decimal("1") != Decimal("0")
+
+    if decimal_number_is_not_natural:
+        raise ValueError
+
+    decimal_factorial: Decimal = Decimal("1")
+
+    for decimal_multiplier in range(1, int(str(decimal_number)) + 1):
+        decimal_factorial *= decimal_multiplier
+
+    return decimal_factorial
+
+
+def decimal_back_factorial(decimal_number: Decimal) -> Decimal:
+    decimal_number_is_not_natural: bool = decimal_number < Decimal("1") or decimal_number % Decimal("1") != Decimal("0")
+    
+    if decimal_number_is_not_natural:
+        raise ValueError
+
+    back_factorial = Decimal("0")
+    decimal_divisor = Decimal("1")
+    decimal_number_is_one: bool = decimal_number == Decimal("1")
+    
+    if decimal_number_is_one:
+        return Decimal("1")
+
+    while not decimal_number_is_one:
+        decimal_number /= decimal_divisor
+
+        decimal_number_is_not_whole: bool = decimal_number % Decimal("1") != Decimal("0")
+
+        if decimal_number_is_not_whole:
+            raise ValueError
+        else:
+            back_factorial += Decimal("1")
+            decimal_divisor += Decimal("1")
+
+        decimal_number_is_one: bool = decimal_number == Decimal("1")
+
+    return back_factorial
+
+
+def decimal_expected_value(decimal_x: list[Decimal], decimal_p: list[Decimal]) -> Decimal:
+    decimal_x_length: int = len(decimal_x)
+    decimal_p_length: int = len(decimal_p)
+    probabilties_sum: Decimal = sum(decimal_p, Decimal("0"))
+
+    lengths_are_mismatched: bool = decimal_x_length != decimal_p_length
+    probabilities_sum_is_invalid: bool = probabilties_sum != Decimal("1")
+
+    if lengths_are_mismatched or probabilities_sum_is_invalid:
+        raise ValueError
+
+    expected_value: Decimal = Decimal("0")
+
+    for x, p in zip(decimal_x, decimal_p):
+        expected_value += x * p
+
+    return expected_value
+
+
 def get_quadratic_equation_roots(
     *,
     a: Decimal,
