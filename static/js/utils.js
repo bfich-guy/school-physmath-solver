@@ -1,6 +1,34 @@
-import { calculateEndpoint, FormulasData } from "../config/formulasdata.js";
-import { areObjectsNull } from "./helpers.js";
+import { calculateEndpoint, FormulasData } from "./config.js";
 
+
+// Helpers
+
+export function areObjectsNull({
+    objects,
+}) {
+    let areObjectsNull = false;
+
+    for (const object of objects) {
+        const objectIsNull = object === null || object === undefined;
+
+        if (objectIsNull) {
+            return true;
+        }
+    }
+
+    return areObjectsNull;
+};
+
+
+export function parseUserFormulaName({
+    userFormulaName,
+}) {
+    const parsedUserFormulaName = userFormulaName.trim().toLowerCase();
+    return parsedUserFormulaName;
+};
+
+
+// Server
 
 export function calculateFormula() {
     for (const [buttonId, buttonData] of Object.entries(FormulasData)) {
@@ -76,4 +104,25 @@ export function calculateFormula() {
             })
         });
     };
+};
+
+
+export function searchFormula() {
+    const formulasGridWidget = document.getElementById("formulas-grid");
+    const formulaSearchingInputWidget = document.getElementById("formula-searching-input");
+
+    formulaSearchingInputWidget.addEventListener('input', () => {
+        for (const formulaCardWidget of formulasGridWidget.children) {
+            const formulaNameWidget = formulaCardWidget.getElementsByClassName("formula-name")[0];
+            const formulaNameValue = parseUserFormulaName({userFormulaName: formulaNameWidget.textContent});
+            const formulaSearchingInputValue = parseUserFormulaName({userFormulaName: formulaSearchingInputWidget.value});
+            const formulaIsFound = formulaNameValue.includes(formulaSearchingInputValue);
+
+            if (formulaIsFound) {
+                formulaCardWidget.style.display = '';
+            } else {
+                formulaCardWidget.style.display = 'none';
+            };
+        };
+    });
 };

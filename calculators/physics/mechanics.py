@@ -209,6 +209,46 @@ class MechanicalEfficiencyLaw:
         At: Decimal = (Au / eta) * Decimal("100")
         return At
 
+
+class SpringPendulumPeriodLaw:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_T(self, *, pi: Decimal, m: Decimal, k: Decimal) -> Decimal:
+        T: Decimal = Decimal("2") * pi * (m / k).sqrt()
+        return T
+
+
+    def get_m(self, *, T: Decimal, pi: Decimal, k: Decimal) -> Decimal:
+        m: Decimal = (T ** Decimal("2") * k) / (Decimal("4") * pi ** Decimal("2"))
+        return m
+
+
+    def get_k(self, *, T: Decimal, pi: Decimal, m: Decimal) -> Decimal:
+        k: Decimal = (Decimal("4") * pi ** Decimal("2") * m) / (T ** Decimal("2"))
+        return k
+
+
+class SimplePendulumPeriodLaw:
+    def __init__(self) -> None:
+        pass
+
+
+    def get_T(self, *, pi: Decimal, l: Decimal, g: Decimal) -> Decimal:
+        T: Decimal = Decimal("2") * pi * (l / g).sqrt()
+        return T
+
+
+    def get_l(self, *, T: Decimal, pi: Decimal, g: Decimal) -> Decimal:
+        m: Decimal = (T ** Decimal("2") * g) / (Decimal("4") * pi ** Decimal("2"))
+        return m
+
+
+    def get_g(self, *, T: Decimal, pi: Decimal, l: Decimal) -> Decimal:
+        k: Decimal = (Decimal("4") * pi ** Decimal("2") * l) / (T ** Decimal("2"))
+        return k
+
 #endregion
 
 

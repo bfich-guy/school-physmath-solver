@@ -1,58 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .solver-header-background {
-    background-color: lightgray;
-    border: 4px solid gray;
+    background-image: linear-gradient(lightgray, darkgray);
+    border-bottom: 4px solid darkgray;
 }
 
 .solver-main-background {
-    border-left: 4px dashed black;
-    border-right: 4px dashed black;
+    background-color: white;
 }
 
 .solver-footer-background {
-    background-color: lightgray;
-    border: 4px solid gray;
+    background-image: linear-gradient(lightgray, darkgray);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.solver-math-background {
-    background-image: url("/static/images/math_background.png");
+.solver-physmath-background {
+    background-image: url("/static/images/physmath_background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
     background-attachment: fixed;
 }
 
-.solver-physics-background {
-    background-image: url("/static/images/physics_background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; 
-    background-attachment: fixed;
+.solver-physmath-logo-background {
+    width: 200px;
+    height: 200px;
 }
 
-.solver-header-text {
-    font: bold 24px 'Franklin Gothic Medium';
-    color: gray;
+.solver-title-text {
+    color: black;
+    font: bold 32px 'Arial';
     text-align: center;
+    margin: 4% 8%;
 }
 
-.solver-main-text {
+.solver-information-text {
+    color: black;
+    font-size: 16px;
+    font-family: 'Arial';
+    text-align: left;
+    margin: 4% 8%;
+}
+
+.solver-copyright-text {
     color: black;
     font-size: 24px;
-    font-family: 'Franklin Gothic Medium';
+    font-family: 'Arial';
     text-align: left;
-    margin: 4% 4%;
-}
-
-.solver-footer-text {
-    color: gray;
-    font: bold 32px 'Franklin Gothic Medium';
-    text-align: center;
-    margin: 4% 4%;
-}
-
-.solver-header-menu {
-    display: flex;
-    flex-direction: column;
+    padding: 8px;
 }
 
 .solver-header-links {
@@ -62,49 +61,74 @@
 }
 
 .solver-header-link {
-    border-radius: 16px;
+    display: inline-block;
+    color: black;
+    font: normal 16px 'Arial';
+    text-align: center;
     text-decoration: none;
-    color: gray;
-    font: bold 24px 'Franklin Gothic Medium';
-    padding: 8px;
+    padding: 16px 0;
+    width: fit-content;
+}
+
+.solver-header-subject-title {
+    display: inline-block;
+    color: black;
+    font: bold 16px 'Arial';
+    text-align: center;
+    width: fit-content;
 }
 
 .solver-header-link:hover {
-    background-color: gray;
-    color: white;
+    color: dimgray;
 }
 
-.solver-footer-menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.solver-header-subject-menu-card {
+    display: flex;
+    flex-direction: row;
+    background-color: auto;
+    justify-content: space-evenly;
 }
 
-.solver-footer-card {
+.solver-footer-column {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.solver-footer-card-links {
+.solver-footer-column-title {
+    color: black;
+    font-size: 24px;
+    font-family: 'Arial';
+    text-align: center;
+    text-decoration: none;
+    padding-top: 16px;
+}
+
+.solver-footer-widgets {
     display: flex;
     flex-direction: column;
     align-items: left;
 }
 
-.solver-footer-card-title {
-    font: bold 32px 'Franklin Gothic Medium';
-    color: gray;
-}
-
 .solver-footer-link {
-    border-radius: 16px;
+    color: black;
+    font-size: 24px;
+    font-family: 'Arial';
+    text-align: left;
     text-decoration: none;
-    color: gray;
-    font: bold 24px 'Franklin Gothic Medium';
     padding: 8px;
+    width: fit-content;
 }
 
 .solver-footer-link:hover {
-    background-color: gray;
-    color: white;
+    color: dimgray;
+}
+
+
+@media (max-width: 768px) {
+    .solver-header-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 2% 2%;
+    }
 }

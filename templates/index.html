@@ -5,71 +5,119 @@
             Физмат-калькулятор - научный калькулятор для школы по физике и математике
         </title>
         <link rel="stylesheet" href="{{ url_for('static', path='css/solver.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', path='css/subjects.css') }}">
         <link rel="icon" type="image/x-icon" href="/static/images/school_physmath_solver_favicon.png">
     </head>
     <body>
         <header>
-            <div id="solver-header" class="solver-header-background solver-header-menu">
-                
+            <div class="solver-header-background">
+                <div class="solver-header-links">
+                    <a class="solver-header-link" href="/math/algebra">
+                        Алгебра
+                    </a>
+                    <a class="solver-header-link" href="/math/geometry">
+                        Геометрия
+                    </a>
+                    <a class="solver-header-link" href="/math/probstats">
+                        ТВиС
+                    </a>
+                    <a class="solver-header-link" href="/physics/electromagnetics">
+                        Электромагнетизм
+                    </a>
+                    <a class="solver-header-link" href="/physics/mechanics">
+                        Механика
+                    </a>
+                    <a class="solver-header-link" href="/physics/thermodynamics">
+                        Термодинамика
+                    </a>
+                </div>
             </div>
         </header>
         <main>
             <div class="solver-main-background">
-                <p class="solver-main-text">
+                <p class="solver-title-text">
+                    Физмат-калькулятор
+                </p>
+                <p class="solver-information-text">
                     Физмат-калькулятор - это сайт, созданный для быстрых вычислений школьных формул из учебников.
                     Он предназначен для экономии времени и высокой производительности на уроке.
-                    В отличии от обычного калькулятора, он не падает от деления на ноль или отрицательного корня.
-                    Его преимущество против нейросетей заключается в скорости и точности вычислений.
-                </p>
-                <p class="solver-main-text">
                     Наш научный калькулятор может быть использован для решения задач прямо на уроке.
                     С помощью него учитель сможет подготовить учеников к контрольной или экзаменам.
-                    Он предлагает пользователю интерактивное учебное пособие в сопровождении школьной программы.
-                    Им могут пользоваться учителя, ученики или просто интересующиеся люди.
-                </p>
-                <p class="solver-main-text">
+                    Так же ученик мог бы пользоваться калькулятором с целью самостоятельной проверки решения домашнего задания.
                     Данный проект прощает пользователю отрицательную массу или скорость, но не позволит ему совершать математические ошибки.
-                    Задача калькулятора - чистый расчёт по готовым формулам и каждый пользователь сам отвечает за решённые им задачи, мы лишь предлагаем быстрые вычисления.
+                    Задача калькулятора - чистый расчёт по готовым формулам и каждый пользователь сам отвечает за решённые им задачи.
                 </p>
-                <div class="subjects-grid">
-                    <div class="subject-card subject-physics-image">
-                        <p class="subject-name">
-                            Физика
-                        </p>
-                        <div class="subjects-list">
-                            <a href="/physics/electromagnetics" class="subject-link">
-                                Электромагнетизм
-                            </a>
-                            <a href="/physics/electromagnetics" class="subject-link">
-                                Механика
-                            </a>
-                            <a href="/physics/electromagnetics" class="subject-link">
-                                Термодинамика
-                            </a>
-                        </div>
-                    </div>
-                    <div class="subject-card subject-math-image">
-                        <p class="subject-name">
-                            Математика
-                        </p>
-                        <div class="subjects-list">
-                            <a href="/math/algebra" class="subject-link">
-                                Алгебра
-                            </a>
-                            <a href="/math/geometry" class="subject-link">
-                                Геометрия
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <p class="solver-title-text">
+                    Наши преимущества
+                </p>
+                <p class="solver-information-text">
+                    Наш сайт полностью анонимный и не требует регистрации, а значит Вам не нужно рисковать личными данными для расчётов: всё работает само по себе.
+                    Вам остается лишь найти нужную формулу, внести Ваши числа из учебника и Физмат-калькулятор с удовольствием выдаст ответ (или сообщение об ошибке).
+                    Аналоговый калькулятор легко забыть, потерять или сломать, а сайт нельзя просто так где-то оставить, так что вычисления доступны в любое время.
+                    И наконец, Физмат-калькулятор достаточно умён, чтобы отбрасывать лишние символы в полях ввода: он принимает только цифры, минусы и точки.
+                    Остальные символы он просто игнорирует, так что можно писать, например, векторы, прямым текстом: a{3, 4, 12}.
+                </p>
+                <p class="solver-title-text">
+                    Инструкция к пользованию
+                </p>
+                <p class="solver-information-text">
+                    Всё очень просто: достаточно лишь выбрать в верхнем меню раздел математики или физики и найти карточку с нужной формулой.
+                    Для данного действия вверху есть поисковая строка, куда Вы вводите название формулы, и после ввода Физмат-калькулятор сам найдет карточки.
+                    К слову, лимит ввода в полях формул ограничен 32 символами с целью предотвращения кибератак, перегружающих калькулятор слишком большими числами.
+                    Затем найдите кнопку, на которой написанно именно то, что Вам нужно посчитать и нажмите на неё: Вы получите ответ или сообщение об ошибке.
+                    Наши формулы сделаны так, чтобы каждые промежуточные величины можно было посчитать отдельно, это дает Вам свободу действий в расчётах.
+                </p>
+                <p class="solver-title-text">
+                    Политика пользования
+                </p>
+                <p class="solver-information-text">
+                    МЫ НЕ СОБИРАЕМ НИКАКИХ ДАННЫХ ИЛИ СРЕДСТВ НИ В КАКОМ ВИДЕ!
+                    Физмат-калькулятор не потребует с вас ни единого символа личных данных или средств.
+                    Его задача - быстрые, точные и отказоустойчивые вычисления школьных формул из учебников.
+                    Мы не храним никаких данных ни о каком пользователе, мы лишь принимаем Ваши числа на вход для расчётов.
+                </p>
             </div>
         </main>
         <footer>
-            <div id="solver-footer" class="solver-footer-background solver-footer-menu">
-                
+            <div class="solver-footer-background">
+                <div class="solver-footer-column">
+                    <p class="solver-footer-column-title">
+                        Навигация
+                    </p>
+                    <div class="solver-footer-widgets">
+                        <a class="solver-footer-link" href="/">
+                            Главная
+                        </a>
+                        <a class="solver-footer-link" href="/math/algebra">
+                            Алгебра
+                        </a>
+                        <a class="solver-footer-link" href="/math/geometry">
+                            Геометрия
+                        </a>
+                        <a class="solver-footer-link" href="/physics/electromagnetics">
+                            Электромагнетизм
+                        </a>
+                        <a class="solver-footer-link" href="/physics/mechanics">
+                            Механика
+                        </a>
+                        <a class="solver-footer-link" href="/physics/thermodynamics">
+                            Термодинамика
+                        </a>
+                    </div>
+                </div>
+                <div class="solver-footer-column">
+                    <p class="solver-footer-column-title">
+                        Информация
+                    </p>
+                    <div class="solver-footer-widgets">
+                        <p class="solver-copyright-text">
+                            © Copyright 2026 bfich-guy
+                        </p>
+                        <p class="solver-copyright-text">
+                            Все права защищены
+                        </p>
+                    </div>
+                </div>
             </div>
         </footer>
-        <script src="/static/js/pagesetup.js" type="module"></script>
     </body>
 </html>

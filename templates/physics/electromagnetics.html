@@ -8,509 +8,855 @@
         <link rel="stylesheet" href="{{ url_for('static', path='css/formulas.css') }}">
         <link rel="icon" type="image/x-icon" href="/static/images/school_physmath_solver_favicon.png">
     </head>
-    <body class="solver-physics-background">
+    <body>
         <header>
-            <div id="solver-header" class="solver-header-background solver-header-menu">
-
+            <div class="solver-header-background">
+                <div class="solver-header-links">
+                    <a class="solver-header-link" href="/">
+                        Главная
+                    </a>
+                    <a class="solver-header-link" href="/math/algebra">
+                        Алгебра
+                    </a>
+                    <a class="solver-header-link" href="/math/geometry">
+                        Геометрия
+                    </a>
+                    <a class="solver-header-link" href="/math/probstats">
+                        ТВиС
+                    </a>
+                    <p class="solver-header-subject-title">
+                        Электромагнетизм
+                    </p>
+                    <a class="solver-header-link" href="/physics/mechanics">
+                        Механика
+                    </a>
+                    <a class="solver-header-link" href="/physics/thermodynamics">
+                        Термодинамика
+                    </a>
+                </div>
+                <div class="solver-header-subject-menu-card">
+                    <input id="formula-searching-input" class="formula-searching-input" type="text" placeholder="Введите то, что Вам нужно посчитать">
+                </div>
             </div>
         </header>
         <main>
-            <div class="solver-main-background formulas-grid">
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Закон Ома для участка цепи
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>U</mi>
-                            <mo>=</mo>
-                            <mi>I</mi>
-                            <mi>R</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="ohms-specific-law-U-input" type="text" class="formula-input-field" placeholder="U">
-                        <input id="ohms-specific-law-I-input" type="text" class="formula-input-field" placeholder="I">
-                        <input id="ohms-specific-law-R-input" type="text" class="formula-input-field" placeholder="R">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="ohms-specific-law-U-button" class="formula-button">
+            <div class="solver-physmath-background">
+                <div id="formulas-grid" class="formulas-grid">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон Ома для участка цепи
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>U</mi>
-                            </math>
-                        </button>
-                        <button id="ohms-specific-law-I-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
                                 <mi>I</mi>
-                            </math>
-                        </button>
-                        <button id="ohms-specific-law-R-button" class="formula-button">
-                            <math>
                                 <mi>R</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="ohms-specific-law-U-input" type="text" class="formula-quantity-input-field" placeholder="U">
+                            <input id="ohms-specific-law-I-input" type="text" class="formula-quantity-input-field" placeholder="I">
+                            <input id="ohms-specific-law-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="ohms-specific-law-U-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>U</mi>
+                                </math>
+                            </button>
+                            <button id="ohms-specific-law-I-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>I</mi>
+                                </math>
+                            </button>
+                            <button id="ohms-specific-law-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="ohms-specific-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="ohms-specific-law-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Закон Ома для полной цепи
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>E</mi>
-                            <mo>=</mo>
-                            <mi>U</mi>
-                            <mo>+</mo>
-                            <mi>I</mi>
-                            <mi>r</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="ohms-full-law-E-input" type="text" class="formula-input-field" placeholder="E">
-                        <input id="ohms-full-law-U-input" type="text" class="formula-input-field" placeholder="U">
-                        <input id="ohms-full-law-I-input" type="text" class="formula-input-field" placeholder="I">
-                        <input id="ohms-full-law-r-input" type="text" class="formula-input-field" placeholder="r">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="ohms-full-law-E-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон Ома для полной цепи
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>E</mi>
-                            </math>
-                        </button>
-                        <button id="ohms-full-law-U-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
                                 <mi>U</mi>
-                            </math>
-                        </button>
-                        <button id="ohms-full-law-I-button" class="formula-button">
-                            <math>
+                                <mo>+</mo>
                                 <mi>I</mi>
-                            </math>
-                        </button>
-                        <button id="ohms-full-law-r-button" class="formula-button">
-                            <math>
                                 <mi>r</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="ohms-full-law-E-input" type="text" class="formula-quantity-input-field" placeholder="E">
+                            <input id="ohms-full-law-U-input" type="text" class="formula-quantity-input-field" placeholder="U">
+                            <input id="ohms-full-law-I-input" type="text" class="formula-quantity-input-field" placeholder="I">
+                            <input id="ohms-full-law-r-input" type="text" class="formula-quantity-input-field" placeholder="r">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="ohms-full-law-E-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>E</mi>
+                                </math>
+                            </button>
+                            <button id="ohms-full-law-U-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>U</mi>
+                                </math>
+                            </button>
+                            <button id="ohms-full-law-I-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>I</mi>
+                                </math>
+                            </button>
+                            <button id="ohms-full-law-r-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>r</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="ohms-full-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="ohms-full-law-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Закон Ватта
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>P</mi>
-                            <mo>=</mo>
-                            <mi>U</mi>
-                            <mi>I</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="watts-law-P-input" type="text" class="formula-input-field" placeholder="P">
-                        <input id="watts-law-U-input" type="text" class="formula-input-field" placeholder="U">
-                        <input id="watts-law-I-input" type="text" class="formula-input-field" placeholder="I">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="watts-law-P-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон Ватта
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>P</mi>
-                            </math>
-                        </button>
-                        <button id="watts-law-U-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
                                 <mi>U</mi>
-                            </math>
-                        </button>
-                        <button id="watts-law-I-button" class="formula-button">
-                            <math>
                                 <mi>I</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="watts-law-P-input" type="text" class="formula-quantity-input-field" placeholder="P">
+                            <input id="watts-law-U-input" type="text" class="formula-quantity-input-field" placeholder="U">
+                            <input id="watts-law-I-input" type="text" class="formula-quantity-input-field" placeholder="I">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="watts-law-P-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>P</mi>
+                                </math>
+                            </button>
+                            <button id="watts-law-U-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>U</mi>
+                                </math>
+                            </button>
+                            <button id="watts-law-I-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>I</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="watts-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="watts-law-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Закон Джоуля-Ленца
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>Q</mi>
-                            <mo>=</mo>
-                            <mi>P</mi>
-                            <mi>t</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="joule-lenz-law-Q-input" type="text" class="formula-input-field" placeholder="Q">
-                        <input id="joule-lenz-law-P-input" type="text" class="formula-input-field" placeholder="P">
-                        <input id="joule-lenz-law-t-input" type="text" class="formula-input-field" placeholder="t">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="joule-lenz-law-Q-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон Джоуля-Ленца
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>Q</mi>
-                            </math>
-                        </button>
-                        <button id="joule-lenz-law-P-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
                                 <mi>P</mi>
-                            </math>
-                        </button>
-                        <button id="joule-lenz-law-t-button" class="formula-button">
-                            <math>
                                 <mi>t</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="joule-lenz-law-Q-input" type="text" class="formula-quantity-input-field" placeholder="Q">
+                            <input id="joule-lenz-law-P-input" type="text" class="formula-quantity-input-field" placeholder="P">
+                            <input id="joule-lenz-law-t-input" type="text" class="formula-quantity-input-field" placeholder="t">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="joule-lenz-law-Q-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>Q</mi>
+                                </math>
+                            </button>
+                            <button id="joule-lenz-law-P-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>P</mi>
+                                </math>
+                            </button>
+                            <button id="joule-lenz-law-t-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>t</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="joule-lenz-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="joule-lenz-law-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Закон Кулона
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>F</mi>
-                            <mo>=</mo>
-                            <mi>k</mi>
-                            <mfrac>
-                                <mrow>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон Кулона
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>F</mi>
+                                <mo>=</mo>
+                                <mi>k</mi>
+                                <mfrac>
+                                    <mrow>
+                                        <mi><mo>|</mo></mi>
+                                            <msub>
+                                                <mi>q</mi>
+                                                <mn>1</mn>
+                                            </msub>
+                                        <mi><mo>|</mo></mi>
+                                        <mi><mo>|</mo></mi>
+                                            <msub>
+                                                <mi>q</mi>
+                                                <mn>2</mn>
+                                            </msub>
+                                        <mi><mo>|</mo></mi>
+                                    </mrow>
+                                    <msup>
+                                        <mi>r</mi>
+                                        <mn>2</mn>
+                                    </msup>
+                                </mfrac>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="coulombs-law-F-input" type="text" class="formula-quantity-input-field" placeholder="F">
+                            <input id="coulombs-law-k-input" type="text" class="formula-quantity-input-field" placeholder="k">
+                            <input id="coulombs-law-q1-input" type="text" class="formula-quantity-input-field" placeholder="|q1|">
+                            <input id="coulombs-law-q2-input" type="text" class="formula-quantity-input-field" placeholder="|q2|">
+                            <input id="coulombs-law-r-input" type="text" class="formula-quantity-input-field" placeholder="r">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="coulombs-law-F-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>F</mi>
+                                </math>
+                            </button>
+                            <button id="coulombs-law-q1-button" class="formula-quantity-button">
+                                <math>
                                     <mi><mo>|</mo></mi>
                                         <msub>
                                             <mi>q</mi>
                                             <mn>1</mn>
                                         </msub>
                                     <mi><mo>|</mo></mi>
+                                </math>
+                            </button>
+                            <button id="coulombs-law-q2-button" class="formula-quantity-button">
+                                <math>
                                     <mi><mo>|</mo></mi>
                                         <msub>
                                             <mi>q</mi>
                                             <mn>2</mn>
                                         </msub>
                                     <mi><mo>|</mo></mi>
-                                </mrow>
-                                <msup>
+                                </math>
+                            </button>
+                            <button id="coulombs-law-r-button" class="formula-quantity-button">
+                                <math>
                                     <mi>r</mi>
-                                    <mn>2</mn>
-                                </msup>
-                            </mfrac>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="coulombs-law-F-input" type="text" class="formula-input-field" placeholder="F">
-                        <input id="coulombs-law-k-input" type="text" class="formula-input-field" placeholder="k">
-                        <input id="coulombs-law-q1-input" type="text" class="formula-input-field" placeholder="|q1|">
-                        <input id="coulombs-law-q2-input" type="text" class="formula-input-field" placeholder="|q2|">
-                        <input id="coulombs-law-r-input" type="text" class="formula-input-field" placeholder="r">
+                                </math>
+                            </button>
+                        </div>
+                        <p id="coulombs-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <div class="formula-buttons-card">
-                        <button id="coulombs-law-F-button" class="formula-button">
-                            <math>
-                                <mi>F</mi>
-                            </math>
-                        </button>
-                        <button id="coulombs-law-q1-button" class="formula-button">
-                            <math>
-                                <mi><mo>|</mo></mi>
-                                    <msub>
-                                        <mi>q</mi>
-                                        <mn>1</mn>
-                                    </msub>
-                                <mi><mo>|</mo></mi>
-                            </math>
-                        </button>
-                        <button id="coulombs-law-q2-button" class="formula-button">
-                            <math>
-                                <mi><mo>|</mo></mi>
-                                    <msub>
-                                        <mi>q</mi>
-                                        <mn>2</mn>
-                                    </msub>
-                                <mi><mo>|</mo></mi>
-                            </math>
-                        </button>
-                        <button id="coulombs-law-r-button" class="formula-button">
-                            <math>
-                                <mi>r</mi>
-                            </math>
-                        </button>
-                    </div>
-                    <p id="coulombs-law-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Закон сопротивления проводника
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>R</mi>
-                            <mo>=</mo>
-                            <mfrac>
-                                <mrow>
-                                    <mi>ρ</mi>
-                                    <mi>l</mi>
-                                </mrow>
-                                <mi>S</mi>
-                            </mfrac>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="conductor-resistance-law-R-input" type="text" class="formula-input-field" placeholder="R">
-                        <input id="conductor-resistance-law-rho-input" type="text" class="formula-input-field" placeholder="ρ">
-                        <input id="conductor-resistance-law-l-input" type="text" class="formula-input-field" placeholder="l">
-                        <input id="conductor-resistance-law-S-input" type="text" class="formula-input-field" placeholder="S">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="conductor-resistance-law-R-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон сопротивления проводника
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>R</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>ρ</mi>
+                                        <mi>l</mi>
+                                    </mrow>
+                                    <mi>S</mi>
+                                </mfrac>
                             </math>
-                        </button>
-                        <button id="conductor-resistance-law-rho-button" class="formula-button">
-                            <math>
-                                <mi>ρ</mi>
-                            </math>
-                        </button>
-                        <button id="conductor-resistance-law-l-button" class="formula-button">
-                            <math>
-                                <mi>l</mi>
-                            </math>
-                        </button>
-                        <button id="conductor-resistance-law-S-button" class="formula-button">
-                            <math>
-                                <mi>S</mi>
-                            </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="conductor-resistance-law-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                            <input id="conductor-resistance-law-rho-input" type="text" class="formula-quantity-input-field" placeholder="ρ">
+                            <input id="conductor-resistance-law-l-input" type="text" class="formula-quantity-input-field" placeholder="l">
+                            <input id="conductor-resistance-law-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="conductor-resistance-law-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                            <button id="conductor-resistance-law-rho-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>ρ</mi>
+                                </math>
+                            </button>
+                            <button id="conductor-resistance-law-l-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>l</mi>
+                                </math>
+                            </button>
+                            <button id="conductor-resistance-law-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="conductor-resistance-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="conductor-resistance-law-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Закон Ампера
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>F</mi>
-                            <mo>=</mo>
-                            <mi>B</mi>
-                            <mi>I</mi>
-                            <mi>L</mi>
-                            <mi>sin</mi>
-                            <mi>α</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="amperes-law-F-input" type="text" class="formula-input-field" placeholder="F">
-                        <input id="amperes-law-B-input" type="text" class="formula-input-field" placeholder="B">
-                        <input id="amperes-law-I-input" type="text" class="formula-input-field" placeholder="I">
-                        <input id="amperes-law-L-input" type="text" class="formula-input-field" placeholder="L">
-                        <input id="amperes-law-sina-input" type="text" class="formula-input-field" placeholder="sina">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="amperes-law-F-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон Ампера
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>F</mi>
-                            </math>
-                        </button>
-                        <button id="amperes-law-B-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
                                 <mi>B</mi>
-                            </math>
-                        </button>
-                        <button id="amperes-law-I-button" class="formula-button">
-                            <math>
                                 <mi>I</mi>
-                            </math>
-                        </button>
-                        <button id="amperes-law-L-button" class="formula-button">
-                            <math>
                                 <mi>L</mi>
-                            </math>
-                        </button>
-                        <button id="amperes-law-sina-button" class="formula-button">
-                            <math>
                                 <mi>sin</mi>
                                 <mi>α</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="amperes-law-F-input" type="text" class="formula-quantity-input-field" placeholder="F">
+                            <input id="amperes-law-B-input" type="text" class="formula-quantity-input-field" placeholder="B">
+                            <input id="amperes-law-I-input" type="text" class="formula-quantity-input-field" placeholder="I">
+                            <input id="amperes-law-L-input" type="text" class="formula-quantity-input-field" placeholder="L">
+                            <input id="amperes-law-sina-input" type="text" class="formula-quantity-input-field" placeholder="sina">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="amperes-law-F-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>F</mi>
+                                </math>
+                            </button>
+                            <button id="amperes-law-B-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>B</mi>
+                                </math>
+                            </button>
+                            <button id="amperes-law-I-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>I</mi>
+                                </math>
+                            </button>
+                            <button id="amperes-law-L-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>L</mi>
+                                </math>
+                            </button>
+                            <button id="amperes-law-sina-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>sin</mi>
+                                    <mi>α</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="amperes-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="amperes-law-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Закон Лоренца
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>F</mi>
-                            <mo>=</mo>
-                            <mi>q</mi>
-                            <mi>v</mi>
-                            <mi>B</mi>
-                            <mi>sin</mi>
-                            <mi>α</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="lorentz-law-F-input" type="text" class="formula-input-field" placeholder="F">
-                        <input id="lorentz-law-q-input" type="text" class="formula-input-field" placeholder="q">
-                        <input id="lorentz-law-v-input" type="text" class="formula-input-field" placeholder="v">
-                        <input id="lorentz-law-B-input" type="text" class="formula-input-field" placeholder="B">
-                        <input id="lorentz-law-sina-input" type="text" class="formula-input-field" placeholder="sina">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="lorentz-law-F-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон Лоренца
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>F</mi>
-                            </math>
-                        </button>
-                        <button id="lorentz-law-q-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
                                 <mi>q</mi>
-                            </math>
-                        </button>
-                        <button id="lorentz-law-v-button" class="formula-button">
-                            <math>
                                 <mi>v</mi>
-                            </math>
-                        </button>
-                        <button id="lorentz-law-B-button" class="formula-button">
-                            <math>
                                 <mi>B</mi>
-                            </math>
-                        </button>
-                        <button id="lorentz-law-sina-button" class="formula-button">
-                            <math>
                                 <mi>sin</mi>
                                 <mi>α</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="lorentz-law-F-input" type="text" class="formula-quantity-input-field" placeholder="F">
+                            <input id="lorentz-law-q-input" type="text" class="formula-quantity-input-field" placeholder="q">
+                            <input id="lorentz-law-v-input" type="text" class="formula-quantity-input-field" placeholder="v">
+                            <input id="lorentz-law-B-input" type="text" class="formula-quantity-input-field" placeholder="B">
+                            <input id="lorentz-law-sina-input" type="text" class="formula-quantity-input-field" placeholder="sina">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="lorentz-law-F-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>F</mi>
+                                </math>
+                            </button>
+                            <button id="lorentz-law-q-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>q</mi>
+                                </math>
+                            </button>
+                            <button id="lorentz-law-v-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>v</mi>
+                                </math>
+                            </button>
+                            <button id="lorentz-law-B-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>B</mi>
+                                </math>
+                            </button>
+                            <button id="lorentz-law-sina-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>sin</mi>
+                                    <mi>α</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="lorentz-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="lorentz-law-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Закон Фарадея
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>E</mi>
-                            <mo>=</mo>
-                            <mo>−</mo>
-                            <mfrac>
-                                <mrow>
-                                    <mi>Δ</mi>
-                                    <mi>Φ</mi>
-                                </mrow>
-                                <mrow>
-                                    <mi>Δ</mi>
-                                    <mi>t</mi>
-                                </mrow>
-                            </mfrac>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="faradays-law-E-input" type="text" class="formula-input-field" placeholder="E">
-                        <input id="faradays-law-Dphi-input" type="text" class="formula-input-field" placeholder="ΔΦ">
-                        <input id="faradays-law-Dt-input" type="text" class="formula-input-field" placeholder="Δt">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="faradays-law-E-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон Фарадея
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>E</mi>
+                                <mo>=</mo>
+                                <mo>−</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>Δ</mi>
+                                        <mi>Φ</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>Δ</mi>
+                                        <mi>t</mi>
+                                    </mrow>
+                                </mfrac>
                             </math>
-                        </button>
-                        <button id="faradays-law-Dphi-button" class="formula-button">
-                            <math>
-                                <mi>Δ</mi>
-                                <mi>Φ</mi>
-                            </math>
-                        </button>
-                        <button id="faradays-law-Dt-button" class="formula-button">
-                            <math>
-                                <mi>Δ</mi>
-                                <mi>t</mi>
-                            </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="faradays-law-E-input" type="text" class="formula-quantity-input-field" placeholder="E">
+                            <input id="faradays-law-Dphi-input" type="text" class="formula-quantity-input-field" placeholder="ΔΦ">
+                            <input id="faradays-law-Dt-input" type="text" class="formula-quantity-input-field" placeholder="Δt">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="faradays-law-E-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>E</mi>
+                                </math>
+                            </button>
+                            <button id="faradays-law-Dphi-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>Δ</mi>
+                                    <mi>Φ</mi>
+                                </math>
+                            </button>
+                            <button id="faradays-law-Dt-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>Δ</mi>
+                                    <mi>t</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="faradays-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="faradays-law-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Закон магнитного потока на контур
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>Φ</mi>
-                            <mo>=</mo>
-                            <mi>B</mi>
-                            <mi>S</mi>
-                            <mi>cos</mi>
-                            <mi>α</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="magnetic-flux-to-contour-law-phi-input" type="text" class="formula-input-field" placeholder="Φ">
-                        <input id="magnetic-flux-to-contour-law-B-input" type="text" class="formula-input-field" placeholder="B">
-                        <input id="magnetic-flux-to-contour-law-S-input" type="text" class="formula-input-field" placeholder="S">
-                        <input id="magnetic-flux-to-contour-law-cosa-input" type="text" class="formula-input-field" placeholder="cosa">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="magnetic-flux-to-contour-law-phi-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон магнитного потока на контур
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>Φ</mi>
-                            </math>
-                        </button>
-                        <button id="magnetic-flux-to-contour-law-B-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
                                 <mi>B</mi>
-                            </math>
-                        </button>
-                        <button id="magnetic-flux-to-contour-law-S-button" class="formula-button">
-                            <math>
                                 <mi>S</mi>
-                            </math>
-                        </button>
-                        <button id="magnetic-flux-to-contour-law-cosa-button" class="formula-button">
-                            <math>
                                 <mi>cos</mi>
                                 <mi>α</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="magnetic-flux-to-contour-law-phi-input" type="text" class="formula-quantity-input-field" placeholder="Φ">
+                            <input id="magnetic-flux-to-contour-law-B-input" type="text" class="formula-quantity-input-field" placeholder="B">
+                            <input id="magnetic-flux-to-contour-law-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="magnetic-flux-to-contour-law-cosa-input" type="text" class="formula-quantity-input-field" placeholder="cosa">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="magnetic-flux-to-contour-law-phi-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>Φ</mi>
+                                </math>
+                            </button>
+                            <button id="magnetic-flux-to-contour-law-B-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>B</mi>
+                                </math>
+                            </button>
+                            <button id="magnetic-flux-to-contour-law-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="magnetic-flux-to-contour-law-cosa-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>cos</mi>
+                                    <mi>α</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="magnetic-flux-to-contour-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="magnetic-flux-to-contour-law-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон магнитного потока самоиндукции
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>Φ</mi>
+                                <mo>=</mo>
+                                <mi>L</mi>
+                                <mi>I</mi>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="self-induction-flux-law-phi-input" type="text" class="formula-quantity-input-field" placeholder="Φ">
+                            <input id="self-induction-flux-law-L-input" type="text" class="formula-quantity-input-field" placeholder="L">
+                            <input id="self-induction-flux-law-I-input" type="text" class="formula-quantity-input-field" placeholder="I">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="self-induction-flux-law-phi-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>Φ</mi>
+                                </math>
+                            </button>
+                            <button id="self-induction-flux-law-L-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>L</mi>
+                                </math>
+                            </button>
+                            <button id="self-induction-flux-law-I-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>I</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="self-induction-flux-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Энергия магнитного поля катушки
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>W</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>L</mi>
+                                        <msup>
+                                            <mi>I</mi>
+                                            <mn>2</mn>
+                                        </msup>
+                                    </mrow>
+                                    <mn>2</mn>
+                                </mfrac>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="magnetic-field-energy-law-W-input" type="text" class="formula-quantity-input-field" placeholder="W">
+                            <input id="magnetic-field-energy-law-L-input" type="text" class="formula-quantity-input-field" placeholder="L">
+                            <input id="magnetic-field-energy-law-I-input" type="text" class="formula-quantity-input-field" placeholder="I">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="magnetic-field-energy-law-W-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>W</mi>
+                                </math>
+                            </button>
+                            <button id="magnetic-field-energy-law-L-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>L</mi>
+                                </math>
+                            </button>
+                            <button id="magnetic-field-energy-law-I-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>I</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="magnetic-field-energy-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон Ленца
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <msub>
+                                    <mi>E</mi>
+                                    <mtext>si</mtext>
+                                </msub>
+                                <mo>=</mo>
+                                <mo>−</mo>
+                                <mi>L</mi>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>Δ</mi>
+                                        <mi>I</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>Δ</mi>
+                                        <mi>t</mi>
+                                    </mrow>
+                                </mfrac>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="lentz-law-Esi-input" type="text" class="formula-quantity-input-field" placeholder="Esi">
+                            <input id="lentz-law-L-input" type="text" class="formula-quantity-input-field" placeholder="L">
+                            <input id="lentz-law-DI-input" type="text" class="formula-quantity-input-field" placeholder="ΔI">
+                            <input id="lentz-law-Dt-input" type="text" class="formula-quantity-input-field" placeholder="Δt">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="lentz-law-Esi-button" class="formula-quantity-button">
+                                <math>
+                                    <msub>
+                                        <mi>E</mi>
+                                        <mtext>si</mtext>
+                                    </msub>
+                                </math>
+                            </button>
+                            <button id="lentz-law-L-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>L</mi>
+                                </math>
+                            </button>
+                            <button id="lentz-law-DI-button" class="formula-quantity-button">
+                                <math>
+                                    <mrow>
+                                        <mi>Δ</mi>
+                                        <mi>I</mi>
+                                    </mrow>
+                                </math>
+                            </button>
+                            <button id="lentz-law-Dt-button" class="formula-quantity-button">
+                                <math>
+                                    <mrow>
+                                        <mi>Δ</mi>
+                                        <mi>t</mi>
+                                    </mrow>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="lentz-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Закон Томсона
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>T</mi>
+                                <mo>=</mo>
+                                <mn>2</mn>
+                                <mi>π</mi>
+                                <msqrt>
+                                    <mi>L</mi>
+                                    <mi>C</mi>
+                                </msqrt>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="thomsons-formula-T-input" type="text" class="formula-quantity-input-field" placeholder="T">
+                            <input id="thomsons-formula-pi-input" type="text" class="formula-quantity-input-field" placeholder="π">
+                            <input id="thomsons-formula-L-input" type="text" class="formula-quantity-input-field" placeholder="L">
+                            <input id="thomsons-formula-C-input" type="text" class="formula-quantity-input-field" placeholder="C">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="thomsons-formula-T-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>T</mi>
+                                </math>
+                            </button>
+                            <button id="thomsons-formula-pi-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>π</mi>
+                                </math>
+                            </button>
+                            <button id="thomsons-formula-L-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>L</mi>
+                                </math>
+                            </button>
+                            <button id="thomsons-formula-C-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>C</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="thomsons-formula-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Заряд на конденсаторе
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>Q</mi>
+                                <mo>=</mo>
+                                <mi>C</mi>
+                                <mi>U</mi>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="capacitor-electric-charge-law-Q-input" type="text" class="formula-quantity-input-field" placeholder="Q">
+                            <input id="capacitor-electric-charge-law-C-input" type="text" class="formula-quantity-input-field" placeholder="C">
+                            <input id="capacitor-electric-charge-law-U-input" type="text" class="formula-quantity-input-field" placeholder="U">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="capacitor-electric-charge-law-Q-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>Q</mi>
+                                </math>
+                            </button>
+                            <button id="capacitor-electric-charge-law-C-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>C</mi>
+                                </math>
+                            </button>
+                            <button id="capacitor-electric-charge-law-U-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>U</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="capacitor-electric-charge-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Энергия конденсатора
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>W</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>C</mi>
+                                        <msup>
+                                            <mi>U</mi>
+                                            <mn>2</mn>
+                                        </msup>
+                                    </mrow>
+                                    <mn>2</mn>
+                                </mfrac>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="charged-capacitor-energy-law-W-input" type="text" class="formula-quantity-input-field" placeholder="W">
+                            <input id="charged-capacitor-energy-law-C-input" type="text" class="formula-quantity-input-field" placeholder="C">
+                            <input id="charged-capacitor-energy-law-U-input" type="text" class="formula-quantity-input-field" placeholder="U">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="charged-capacitor-energy-law-W-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>W</mi>
+                                </math>
+                            </button>
+                            <button id="charged-capacitor-energy-law-C-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>C</mi>
+                                </math>
+                            </button>
+                            <button id="charged-capacitor-energy-law-U-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>U</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="charged-capacitor-energy-law-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
                 </div>
             </div>
         </main>
         <footer>
-            <div id="solver-footer" class="solver-footer-background solver-footer-menu">
-                
+            <div class="solver-footer-background">
+                <div class="solver-footer-column">
+                    <p class="solver-footer-column-title">
+                        Навигация
+                    </p>
+                    <div class="solver-footer-widgets">
+                        <a class="solver-footer-link" href="/">
+                            Главная
+                        </a>
+                        <a class="solver-footer-link" href="/math/algebra">
+                            Алгебра
+                        </a>
+                        <a class="solver-footer-link" href="/math/geometry">
+                            Геометрия
+                        </a>
+                        <a class="solver-footer-link" href="/math/probstats">
+                            ТВиС
+                        </a>
+                        <a class="solver-footer-link" href="/physics/mechanics">
+                            Механика
+                        </a>
+                        <a class="solver-footer-link" href="/physics/thermodynamics">
+                            Термодинамика
+                        </a>
+                    </div>
+                </div>
+                <div class="solver-footer-column">
+                    <p class="solver-footer-column-title">
+                        Информация
+                    </p>
+                    <div class="solver-footer-widgets">
+                        <p class="solver-copyright-text">
+                            © Copyright 2026 bfich-guy
+                        </p>
+                        <p class="solver-copyright-text">
+                            Все права защищены
+                        </p>
+                    </div>
+                </div>
             </div>
         </footer>
-        <script src="/static/js/pagesetup.js" type="module"></script>
         <script src="/static/js/calculateformula.js" type="module"></script>
+        <script src="/static/js/searchingformula.js" type="module"></script>
     </body>
 </html>

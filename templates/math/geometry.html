@@ -8,654 +8,1247 @@
         <link rel="stylesheet" href="{{ url_for('static', path='css/formulas.css') }}">
         <link rel="icon" type="image/x-icon" href="/static/images/school_physmath_solver_favicon.png">
     </head>
-    <body class="solver-math-background">
+    <body>
         <header>
-            <div id="solver-header" class="solver-header-background solver-header-menu">
-
+            <div class="solver-header-background">
+                <div class="solver-header-links">
+                    <a class="solver-header-link" href="/">
+                        Главная
+                    </a>
+                    <a class="solver-header-link" href="/math/algebra">
+                        Алгебра
+                    </a>
+                    <p class="solver-header-subject-title">
+                        Геометрия
+                    </p>
+                    <a class="solver-header-link" href="/math/probstats">
+                        ТВиС
+                    </a>
+                    <a class="solver-header-link" href="/physics/electromagnetics">
+                        Электромагнетизм
+                    </a>
+                    <a class="solver-header-link" href="/physics/mechanics">
+                        Механика
+                    </a>
+                    <a class="solver-header-link" href="/physics/thermodynamics">
+                        Термодинамика
+                    </a>
+                </div>
+                <div class="solver-header-subject-menu-card">
+                    <input id="formula-searching-input" class="formula-searching-input" type="text" placeholder="Введите то, что Вам нужно посчитать">
+                </div>
             </div>
         </header>
         <main>
-            <div class="solver-main-background formulas-grid">
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Площадь круга
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>S</mi>
-                            <mo>=</mo>
-                            <mi>π</mi>
-                            <msup>
-                                <mi>r</mi>
-                                <mn>2</mn>
-                            </msup>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="circle-area-theorem-S-input" type="text" class="formula-input-field" placeholder="S">
-                        <input id="circle-area-theorem-pi-input" type="text" class="formula-input-field" placeholder="pi">
-                        <input id="circle-area-theorem-r-input" type="text" class="formula-input-field" placeholder="r">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="circle-area-theorem-S-button" class="formula-button">
+            <div class="solver-physmath-background">
+                <div id="formulas-grid" class="formulas-grid">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь круга
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>S</mi>
+                                <mo>=</mo>
+                                <mi>π</mi>
+                                <msup>
+                                    <mi>r</mi>
+                                    <mn>2</mn>
+                                </msup>
                             </math>
-                        </button>
-                        <button id="circle-area-theorem-r-button" class="formula-button">
-                            <math>
-                                <mi>r</mi>
-                            </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="circle-area-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="circle-area-theorem-pi-input" type="text" class="formula-quantity-input-field" placeholder="π">
+                            <input id="circle-area-theorem-r-input" type="text" class="formula-quantity-input-field" placeholder="r">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="circle-area-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="circle-area-theorem-r-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>r</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="circle-area-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="circle-area-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Длина окружности
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>S</mi>
-                            <mo>=</mo>
-                            <mn>2</mn>
-                            <mi>π</mi>
-                            <mi>r</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="circumference-theorem-l-input" type="text" class="formula-input-field" placeholder="l">
-                        <input id="circumference-theorem-pi-input" type="text" class="formula-input-field" placeholder="pi">
-                        <input id="circumference-theorem-r-input" type="text" class="formula-input-field" placeholder="r">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="circumference-theorem-l-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Длина окружности
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>l</mi>
-                            </math>
-                        </button>
-                        <button id="circumference-theorem-r-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
+                                <mn>2</mn>
+                                <mi>π</mi>
                                 <mi>r</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="circumference-theorem-l-input" type="text" class="formula-quantity-input-field" placeholder="l">
+                            <input id="circumference-theorem-pi-input" type="text" class="formula-quantity-input-field" placeholder="π">
+                            <input id="circumference-theorem-r-input" type="text" class="formula-quantity-input-field" placeholder="r">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="circumference-theorem-l-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>l</mi>
+                                </math>
+                            </button>
+                            <button id="circumference-theorem-r-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>r</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="circumference-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="circumference-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Площадь параллелограмма через основание и высоту
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>S</mi>
-                            <mo>=</mo>
-                            <mn>a</mn>
-                            <mi>h</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="parallelogram-area-by-base-and-height-theorem-S-input" type="text" class="formula-input-field" placeholder="S">
-                        <input id="parallelogram-area-by-base-and-height-theorem-a-input" type="text" class="formula-input-field" placeholder="a">
-                        <input id="parallelogram-area-by-base-and-height-theorem-h-input" type="text" class="formula-input-field" placeholder="h">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="parallelogram-area-by-base-and-height-theorem-S-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь параллелограмма через основание и высоту
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>S</mi>
-                            </math>
-                        </button>
-                        <button id="parallelogram-area-by-base-and-height-theorem-a-button" class="formula-button">
-                            <math>
-                                <mi>a</mi>
-                            </math>
-                        </button>
-                        <button id="parallelogram-area-by-base-and-height-theorem-h-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
+                                <mn>a</mn>
                                 <mi>h</mi>
                             </math>
-                        </button>
-                    </div>
-                    <p id="parallelogram-area-by-base-and-height-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Средняя линия трапеции
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>m</mi>
-                            <mo>=</mo>
-                            <mfrac>
-                                <mrow>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="parallelogram-area-by-base-and-height-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="parallelogram-area-by-base-and-height-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="parallelogram-area-by-base-and-height-theorem-h-input" type="text" class="formula-quantity-input-field" placeholder="h">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="parallelogram-area-by-base-and-height-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="parallelogram-area-by-base-and-height-theorem-a-button" class="formula-quantity-button">
+                                <math>
                                     <mi>a</mi>
-                                    <mo>+</mo>
-                                    <mi>b</mi>
-                                </mrow>
-                                <mn>2</mn>
-                            </mfrac>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="trapezoid-midline-theorem-m-input" type="text" class="formula-input-field" placeholder="m">
-                        <input id="trapezoid-midline-theorem-a-input" type="text" class="formula-input-field" placeholder="a">
-                        <input id="trapezoid-midline-theorem-b-input" type="text" class="formula-input-field" placeholder="b">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="trapezoid-midline-theorem-m-button" class="formula-button">
-                            <math>
-                                <mi>m</mi>
-                            </math>
-                        </button>
-                        <button id="trapezoid-midline-theorem-a-button" class="formula-button">
-                            <math>
-                                <mi>a</mi>
-                            </math>
-                        </button>
-                        <button id="trapezoid-midline-theorem-b-button" class="formula-button">
-                            <math>
-                                <mi>b</mi>
-                            </math>
-                        </button>
-                    </div>
-                    <p id="trapezoid-midline-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Площадь трапеции через среднюю линию и высоту
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>S</mi>
-                            <mo>=</mo>
-                            <mi>m</mi>
-                            <mi>h</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="trapezoid-area-by-midline-and-height-theorem-S-input" type="text" class="formula-input-field" placeholder="S">
-                        <input id="trapezoid-area-by-midline-and-height-theorem-m-input" type="text" class="formula-input-field" placeholder="m">
-                        <input id="trapezoid-area-by-midline-and-height-theorem-h-input" type="text" class="formula-input-field" placeholder="h">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="trapezoid-area-by-midline-and-height-theorem-S-button" class="formula-button">
-                            <math>
-                                <mi>S</mi>
-                            </math>
-                        </button>
-                        <button id="trapezoid-area-by-midline-and-height-theorem-m-button" class="formula-button">
-                            <math>
-                                <mi>m</mi>
-                            </math>
-                        </button>
-                        <button id="trapezoid-area-by-midline-and-height-theorem-h-button" class="formula-button">
-                            <math>
-                                <mi>h</mi>
-                            </math>
-                        </button>
-                    </div>
-                    <p id="trapezoid-area-by-midline-and-height-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Площадь треугольника через основание и высоту
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>S</mi>
-                            <mo>=</mo>
-                            <mfrac>
-                                <mrow>
-                                    <mi>a</mi>
+                                </math>
+                            </button>
+                            <button id="parallelogram-area-by-base-and-height-theorem-h-button" class="formula-quantity-button">
+                                <math>
                                     <mi>h</mi>
-                                </mrow>
-                                <mn>2</mn>
-                            </mfrac>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="triangle-area-by-base-and-height-theorem-S-input" type="text" class="formula-input-field" placeholder="S">
-                        <input id="triangle-area-by-base-and-height-theorem-a-input" type="text" class="formula-input-field" placeholder="a">
-                        <input id="triangle-area-by-base-and-height-theorem-h-input" type="text" class="formula-input-field" placeholder="h">
+                                </math>
+                            </button>
+                        </div>
+                        <p id="parallelogram-area-by-base-and-height-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <div class="formula-buttons-card">
-                        <button id="triangle-area-by-base-and-height-theorem-S-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Средняя линия трапеции
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>m</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>a</mi>
+                                        <mo>+</mo>
+                                        <mi>b</mi>
+                                    </mrow>
+                                    <mn>2</mn>
+                                </mfrac>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="trapezoid-midline-theorem-m-input" type="text" class="formula-quantity-input-field" placeholder="m">
+                            <input id="trapezoid-midline-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="trapezoid-midline-theorem-b-input" type="text" class="formula-quantity-input-field" placeholder="b">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="trapezoid-midline-theorem-m-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>m</mi>
+                                </math>
+                            </button>
+                            <button id="trapezoid-midline-theorem-a-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>a</mi>
+                                </math>
+                            </button>
+                            <button id="trapezoid-midline-theorem-b-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>b</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="trapezoid-midline-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь трапеции через среднюю линию и высоту
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>S</mi>
-                            </math>
-                        </button>
-                        <button id="triangle-area-by-base-and-height-theorem-a-button" class="formula-button">
-                            <math>
-                                <mi>a</mi>
-                            </math>
-                        </button>
-                        <button id="triangle-area-by-base-and-height-theorem-h-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
+                                <mi>m</mi>
                                 <mi>h</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="trapezoid-area-by-midline-and-height-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="trapezoid-area-by-midline-and-height-theorem-m-input" type="text" class="formula-quantity-input-field" placeholder="m">
+                            <input id="trapezoid-area-by-midline-and-height-theorem-h-input" type="text" class="formula-quantity-input-field" placeholder="h">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="trapezoid-area-by-midline-and-height-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="trapezoid-area-by-midline-and-height-theorem-m-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>m</mi>
+                                </math>
+                            </button>
+                            <button id="trapezoid-area-by-midline-and-height-theorem-h-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>h</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="trapezoid-area-by-midline-and-height-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="triangle-area-by-base-and-height-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Теорема Герона
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>S</mi>
-                            <mo>=</mo>
-                            <msqrt>
-                                <mi>p</mi>
-                                <mo>(</mo>
-                                <mi>p</mi>
-                                <mo>−</mo>
-                                <mi>a</mi>
-                                <mo>)</mo>
-                                <mo>(</mo>
-                                <mi>p</mi>
-                                <mo>−</mo>
-                                <mi>b</mi>
-                                <mo>)</mo>
-                                <mo>(</mo>
-                                <mi>p</mi>
-                                <mo>−</mo>
-                                <mi>c</mi>
-                                <mo>)</mo>
-                            </msqrt>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="heron-theorem-a-input" type="text" class="formula-input-field" placeholder="a">
-                        <input id="heron-theorem-b-input" type="text" class="formula-input-field" placeholder="b">
-                        <input id="heron-theorem-c-input" type="text" class="formula-input-field" placeholder="c">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="heron-theorem-S-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь треугольника через основание и высоту
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>S</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>a</mi>
+                                        <mi>h</mi>
+                                    </mrow>
+                                    <mn>2</mn>
+                                </mfrac>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="triangle-area-by-base-and-height-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="triangle-area-by-base-and-height-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="triangle-area-by-base-and-height-theorem-h-input" type="text" class="formula-quantity-input-field" placeholder="h">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="triangle-area-by-base-and-height-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="triangle-area-by-base-and-height-theorem-a-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>a</mi>
+                                </math>
+                            </button>
+                            <button id="triangle-area-by-base-and-height-theorem-h-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>h</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="triangle-area-by-base-and-height-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="heron-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Теорема косинусов
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <msup>
-                                <mi>c</mi>
-                                <mn>2</mn>
-                            </msup>
-                            <mo>=</mo>
-                            <msup>
-                                <mi>a</mi>
-                                <mn>2</mn>
-                            </msup>
-                            <mo>+</mo>
-                            <msup>
-                                <mi>b</mi>
-                                <mn>2</mn>
-                            </msup>
-                            <mo>−</mo>
-                            <mn>2</mn>
-                            <mi>a</mi>
-                            <mi>b</mi>
-                            <mi>cos</mi>
-                            <mi>α</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="cosine-theorem-a-input" type="text" class="formula-input-field" placeholder="a">
-                        <input id="cosine-theorem-b-input" type="text" class="formula-input-field" placeholder="b">
-                        <input id="cosine-theorem-c-input" type="text" class="formula-input-field" placeholder="c">
-                        <input id="cosine-theorem-cosa-input" type="text" class="formula-input-field" placeholder="cosα">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Теорема Герона
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>S</mi>
+                                <mo>=</mo>
+                                <msqrt>
+                                    <mi>p</mi>
+                                    <mo>(</mo>
+                                    <mi>p</mi>
+                                    <mo>−</mo>
+                                    <mi>a</mi>
+                                    <mo>)</mo>
+                                    <mo>(</mo>
+                                    <mi>p</mi>
+                                    <mo>−</mo>
+                                    <mi>b</mi>
+                                    <mo>)</mo>
+                                    <mo>(</mo>
+                                    <mi>p</mi>
+                                    <mo>−</mo>
+                                    <mi>c</mi>
+                                    <mo>)</mo>
+                                </msqrt>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="heron-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="heron-theorem-b-input" type="text" class="formula-quantity-input-field" placeholder="b">
+                            <input id="heron-theorem-c-input" type="text" class="formula-quantity-input-field" placeholder="c">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="heron-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="heron-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <div class="formula-buttons-card">
-                        <button id="cosine-theorem-a-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Теорема косинусов
+                        </p>
+                        <p class="formula-object">
                             <math>
+                                <msup>
+                                    <mi>c</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>=</mo>
+                                <msup>
+                                    <mi>a</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>+</mo>
+                                <msup>
+                                    <mi>b</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>−</mo>
+                                <mn>2</mn>
                                 <mi>a</mi>
-                            </math>
-                        </button>
-                        <button id="cosine-theorem-b-button" class="formula-button">
-                            <math>
                                 <mi>b</mi>
-                            </math>
-                        </button>
-                        <button id="cosine-theorem-c-button" class="formula-button">
-                            <math>
-                                <mi>c</mi>
-                            </math>
-                        </button>
-                        <button id="cosine-theorem-cosa-button" class="formula-button">
-                            <math>
                                 <mi>cos</mi>
                                 <mi>α</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="cosine-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="cosine-theorem-b-input" type="text" class="formula-quantity-input-field" placeholder="b">
+                            <input id="cosine-theorem-c-input" type="text" class="formula-quantity-input-field" placeholder="c">
+                            <input id="cosine-theorem-cosa-input" type="text" class="formula-quantity-input-field" placeholder="cosα">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="cosine-theorem-a-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>a</mi>
+                                </math>
+                            </button>
+                            <button id="cosine-theorem-b-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>b</mi>
+                                </math>
+                            </button>
+                            <button id="cosine-theorem-c-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>c</mi>
+                                </math>
+                            </button>
+                            <button id="cosine-theorem-cosa-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>cos</mi>
+                                    <mi>α</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="cosine-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="cosine-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Теорема синусов
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mfrac>
-                                <mi>a</mi>
-                                <mrow>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Теорема синусов
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mfrac>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mi>sin</mi>
+                                        <mi>α</mi>
+                                    </mrow>
+                                </mfrac>
+                                <mo>=</mo>
+                                <mn>2</mn>
+                                <mi>R</mi>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="sine-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="sine-theorem-sina-input" type="text" class="formula-quantity-input-field" placeholder="sinα">
+                            <input id="sine-theorem-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="sine-theorem-a-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>a</mi>
+                                </math>
+                            </button>
+                            <button id="sine-theorem-sina-button" class="formula-quantity-button">
+                                <math>
                                     <mi>sin</mi>
                                     <mi>α</mi>
-                                </mrow>
-                            </mfrac>
-                            <mo>=</mo>
-                            <mn>2</mn>
-                            <mi>R</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="sine-theorem-a-input" type="text" class="formula-input-field" placeholder="a">
-                        <input id="sine-theorem-sina-input" type="text" class="formula-input-field" placeholder="sinα">
-                        <input id="sine-theorem-R-input" type="text" class="formula-input-field" placeholder="R">
+                                </math>
+                            </button>
+                            <button id="sine-theorem-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="sine-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <div class="formula-buttons-card">
-                        <button id="sine-theorem-a-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Теорема Пифагора
+                        </p>
+                        <p class="formula-object">
                             <math>
-                                <mi>a</mi>
+                                <msup>
+                                    <mi>c</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>=</mo>
+                                <msup>
+                                    <mi>a</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>+</mo>
+                                <msup>
+                                    <mi>b</mi>
+                                    <mn>2</mn>
+                                </msup>
                             </math>
-                        </button>
-                        <button id="sine-theorem-sina-button" class="formula-button">
-                            <math>
-                                <mi>sin</mi>
-                                <mi>α</mi>
-                            </math>
-                        </button>
-                        <button id="sine-theorem-R-button" class="formula-button">
-                            <math>
-                                <mi>R</mi>
-                            </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="pythagorean-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="pythagorean-theorem-b-input" type="text" class="formula-quantity-input-field" placeholder="b">
+                            <input id="pythagorean-theorem-c-input" type="text" class="formula-quantity-input-field" placeholder="c">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="pythagorean-theorem-a-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>a</mi>
+                                </math>
+                            </button>
+                            <button id="pythagorean-theorem-b-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>b</mi>
+                                </math>
+                            </button>
+                            <button id="pythagorean-theorem-c-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>c</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="pythagorean-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="sine-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Теорема Пифагора
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <msup>
-                                <mi>c</mi>
-                                <mn>2</mn>
-                            </msup>
-                            <mo>=</mo>
-                            <msup>
-                                <mi>a</mi>
-                                <mn>2</mn>
-                            </msup>
-                            <mo>+</mo>
-                            <msup>
-                                <mi>b</mi>
-                                <mn>2</mn>
-                            </msup>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="pythagorean-theorem-a-input" type="text" class="formula-input-field" placeholder="a">
-                        <input id="pythagorean-theorem-b-input" type="text" class="formula-input-field" placeholder="b">
-                        <input id="pythagorean-theorem-c-input" type="text" class="formula-input-field" placeholder="c">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="pythagorean-theorem-a-button" class="formula-button">
-                            <math>
-                                <mi>a</mi>
-                            </math>
-                        </button>
-                        <button id="pythagorean-theorem-b-button" class="formula-button">
-                            <math>
-                                <mi>b</mi>
-                            </math>
-                        </button>
-                        <button id="pythagorean-theorem-c-button" class="formula-button">
-                            <math>
-                                <mi>c</mi>
-                            </math>
-                        </button>
-                    </div>
-                    <p id="pythagorean-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Площадь треугольника через вписанную окружность
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>S</mi>
-                            <mo>=</mo>
-                            <mi>p</mi>
-                            <mi>r</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="triangle-area-by-inscribed-circle-theorem-S-input" type="text" class="formula-input-field" placeholder="S">
-                        <input id="triangle-area-by-inscribed-circle-theorem-p-input" type="text" class="formula-input-field" placeholder="p">
-                        <input id="triangle-area-by-inscribed-circle-theorem-r-input" type="text" class="formula-input-field" placeholder="r">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="triangle-area-by-inscribed-circle-theorem-S-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь треугольника через вписанную окружность
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>S</mi>
-                            </math>
-                        </button>
-                        <button id="triangle-area-by-inscribed-circle-theorem-p-button" class="formula-button">
-                            <math>
+                                <mo>=</mo>
                                 <mi>p</mi>
-                            </math>
-                        </button>
-                        <button id="triangle-area-by-inscribed-circle-theorem-r-button" class="formula-button">
-                            <math>
                                 <mi>r</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="triangle-area-by-inscribed-circle-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="triangle-area-by-inscribed-circle-theorem-p-input" type="text" class="formula-quantity-input-field" placeholder="p">
+                            <input id="triangle-area-by-inscribed-circle-theorem-r-input" type="text" class="formula-quantity-input-field" placeholder="r">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="triangle-area-by-inscribed-circle-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="triangle-area-by-inscribed-circle-theorem-p-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>p</mi>
+                                </math>
+                            </button>
+                            <button id="triangle-area-by-inscribed-circle-theorem-r-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>r</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="triangle-area-by-inscribed-circle-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="triangle-area-by-inscribed-circle-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Площадь треугольника через описанную окружность
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mi>S</mi>
-                            <mo>=</mo>
-                            <mfrac>
-                                <mrow>
-                                    <mi>a</mi>
-                                    <mi>b</mi>
-                                    <mi>c</mi>
-                                </mrow>
-                                <mrow>
-                                    <mn>4</mn>
-                                    <mi>R</mi>
-                                </mrow>
-                            </mfrac>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="triangle-area-by-circumscribed-circle-theorem-S-input" type="text" class="formula-input-field" placeholder="S">
-                        <input id="triangle-area-by-circumscribed-circle-theorem-a-input" type="text" class="formula-input-field" placeholder="a">
-                        <input id="triangle-area-by-circumscribed-circle-theorem-b-input" type="text" class="formula-input-field" placeholder="b">
-                        <input id="triangle-area-by-circumscribed-circle-theorem-c-input" type="text" class="formula-input-field" placeholder="c">
-                        <input id="triangle-area-by-circumscribed-circle-theorem-R-input" type="text" class="formula-input-field" placeholder="R">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="triangle-area-by-circumscribed-circle-theorem-S-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь треугольника через описанную окружность
+                        </p>
+                        <p class="formula-object">
                             <math>
                                 <mi>S</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>a</mi>
+                                        <mi>b</mi>
+                                        <mi>c</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>4</mn>
+                                        <mi>R</mi>
+                                    </mrow>
+                                </mfrac>
                             </math>
-                        </button>
-                        <button id="triangle-area-by-circumscribed-circle-theorem-a-button" class="formula-button">
-                            <math>
-                                <mi>a</mi>
-                            </math>
-                        </button>
-                        <button id="triangle-area-by-circumscribed-circle-theorem-b-button" class="formula-button">
-                            <math>
-                                <mi>b</mi>
-                            </math>
-                        </button>
-                        <button id="triangle-area-by-circumscribed-circle-theorem-c-button" class="formula-button">
-                            <math>
-                                <mi>c</mi>
-                            </math>
-                        </button>
-                        <button id="triangle-area-by-circumscribed-circle-theorem-R-button" class="formula-button">
-                            <math>
-                                <mi>R</mi>
-                            </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="triangle-area-by-circumscribed-circle-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="triangle-area-by-circumscribed-circle-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="triangle-area-by-circumscribed-circle-theorem-b-input" type="text" class="formula-quantity-input-field" placeholder="b">
+                            <input id="triangle-area-by-circumscribed-circle-theorem-c-input" type="text" class="formula-quantity-input-field" placeholder="c">
+                            <input id="triangle-area-by-circumscribed-circle-theorem-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="triangle-area-by-circumscribed-circle-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="triangle-area-by-circumscribed-circle-theorem-a-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>a</mi>
+                                </math>
+                            </button>
+                            <button id="triangle-area-by-circumscribed-circle-theorem-b-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>b</mi>
+                                </math>
+                            </button>
+                            <button id="triangle-area-by-circumscribed-circle-theorem-c-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>c</mi>
+                                </math>
+                            </button>
+                            <button id="triangle-area-by-circumscribed-circle-theorem-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="triangle-area-by-circumscribed-circle-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="triangle-area-by-circumscribed-circle-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Проекция отрезка на оси Ox, Oy
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <msub>
-                                <mi>h</mi>
-                                <mi>x</mi>
-                            </msub>
-                            <mo>=</mo>
-                            <mi>a</mi>
-                            <mi>cos</mi>
-                            <mi>α</mi>
-                            <mo>,</mo>
-                            <msub>
-                                <mi>h</mi>
-                                <mi>y</mi>
-                            </msub>
-                            <mo>=</mo>
-                            <mi>a</mi>
-                            <mi>sin</mi>
-                            <mi>α</mi>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="triangle-side-projection-theorem-h-input" type="text" class="formula-input-field" placeholder="h">
-                        <input id="triangle-side-projection-theorem-a-input" type="text" class="formula-input-field" placeholder="a">
-                        <input id="triangle-side-projection-theorem-cossina-input" type="text" class="formula-input-field" placeholder="sinα или cosα">
-                    </div>
-                    <div class="formula-buttons-card">
-                        <button id="triangle-side-projection-theorem-h-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Проекция отрезка на оси Ox, Oy
+                        </p>
+                        <p class="formula-object">
                             <math>
-                                <mi>h</mi>
-                            </math>
-                        </button>
-                        <button id="triangle-side-projection-theorem-a-button" class="formula-button">
-                            <math>
+                                <msub>
+                                    <mi>h</mi>
+                                    <mi>x</mi>
+                                </msub>
+                                <mo>=</mo>
                                 <mi>a</mi>
-                            </math>
-                        </button>
-                        <button id="triangle-side-projection-theorem-cossina-button" class="formula-button">
-                            <math>
                                 <mi>cos</mi>
                                 <mi>α</mi>
-                                <mo> </mo>
+                                <mo>,</mo>
+                                <msub>
+                                    <mi>h</mi>
+                                    <mi>y</mi>
+                                </msub>
+                                <mo>=</mo>
+                                <mi>a</mi>
                                 <mi>sin</mi>
                                 <mi>α</mi>
                             </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="triangle-side-projection-theorem-h-input" type="text" class="formula-quantity-input-field" placeholder="h">
+                            <input id="triangle-side-projection-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="triangle-side-projection-theorem-cossina-input" type="text" class="formula-quantity-input-field" placeholder="sinα или cosα">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="triangle-side-projection-theorem-h-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>h</mi>
+                                </math>
+                            </button>
+                            <button id="triangle-side-projection-theorem-a-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>a</mi>
+                                </math>
+                            </button>
+                            <button id="triangle-side-projection-theorem-cossina-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>cos</mi>
+                                    <mi>α</mi>
+                                    <mo> </mo>
+                                    <mi>sin</mi>
+                                    <mi>α</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="triangle-side-projection-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="triangle-side-projection-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
-                </div>
-                <div class="formula-card">
-                    <p class="formula-name">
-                        Отношение площадей через коэффициент подобия
-                    </p>
-                    <p class="formula-object">
-                        <math>
-                            <mfrac>
-                                <msub>
-                                    <mi>S</mi>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Отношение площадей через коэффициент подобия
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mfrac>
+                                    <msub>
+                                        <mi>S</mi>
+                                        <mn>2</mn>
+                                    </msub>
+                                    <msub>
+                                        <mi>S</mi>
+                                        <mn>1</mn>
+                                    </msub>
+                                </mfrac>
+                                <mo>=</mo>
+                                <msup>
+                                    <mi>k</mi>
                                     <mn>2</mn>
-                                </msub>
+                                </msup>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="figure-area-by-similarity-coefficient-theorem-S2-input" type="text" class="formula-quantity-input-field" placeholder="S2">
+                            <input id="figure-area-by-similarity-coefficient-theorem-S1-input" type="text" class="formula-quantity-input-field" placeholder="S1">
+                            <input id="figure-area-by-similarity-coefficient-theorem-k-input" type="text" class="formula-quantity-input-field" placeholder="k">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="figure-area-by-similarity-coefficient-theorem-S2-button" class="formula-quantity-button">
+                                <math>
+                                    <msub>
+                                        <mi>S</mi>
+                                        <mn>2</mn>
+                                    </msub>
+                                </math>
+                            </button>
+                            <button id="figure-area-by-similarity-coefficient-theorem-S1-button" class="formula-quantity-button">
+                                <math>
+                                    <msub>
+                                        <mi>S</mi>
+                                        <mn>1</mn>
+                                    </msub>
+                                </math>
+                            </button>
+                            <button id="figure-area-by-similarity-coefficient-theorem-k-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>k</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="figure-area-by-similarity-coefficient-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Сумма углов n-угольника
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>S</mi>
+                                <mo>=</mo>
+                                <mo>(</mo>
+                                <mi>n</mi>
+                                <mo>−</mo>
+                                <mn>2</mn>
+                                <mo>)</mo>
+                                <mn>180</mn>
+                                <mo>°</mo>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="polygon-angles-sum-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="polygon-angles-sum-theorem-n-input" type="text" class="formula-quantity-input-field" placeholder="n">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="polygon-angles-sum-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="polygon-angles-sum-theorem-n-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>n</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="polygon-angles-sum-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Угол правильного n-угольника
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>α</mi>
+                                <mo>°</mo>
+                                <mo>=</mo>
+                                <mn>180</mn>
+                                <mo>−</mo>
+                                <mfrac>
+                                    <mn>360</mn>
+                                    <mi>n</mi>
+                                </mfrac>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="regular-polygon-angle-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="α">
+                            <input id="regular-polygon-angle-theorem-n-input" type="text" class="formula-quantity-input-field" placeholder="n">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="regular-polygon-angle-theorem-a-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>α</mi>
+                                    <mo>°</mo>
+                                </math>
+                            </button>
+                            <button id="regular-polygon-angle-theorem-n-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>n</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="regular-polygon-angle-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь правильного n-угольника через описанную окружность
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>S</mi>
+                                <mo>=</mo>
+                                <mi>n</mi>
+                                <mi>a</mi>
+                                <msqrt>
+                                    <msup>
+                                        <mi>R</mi>
+                                        <mn>2</mn>
+                                    </msup>
+                                    <mo>−</mo>
+                                    <mfrac>
+                                        <msup>
+                                            <mi>a</mi>
+                                            <mn>2</mn>
+                                        </msup>
+                                        <mn>4</mn>
+                                    </mfrac>
+                                </msqrt>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="regular-polygon-area-by-circumscriped-circle-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="regular-polygon-area-by-circumscriped-circle-theorem-n-input" type="text" class="formula-quantity-input-field" placeholder="n">
+                            <input id="regular-polygon-area-by-circumscriped-circle-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="regular-polygon-area-by-circumscriped-circle-theorem-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="regular-polygon-area-by-circumscriped-circle-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="regular-polygon-area-by-circumscriped-circle-theorem-n-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>n</mi>
+                                </math>
+                            </button>
+                            <button id="regular-polygon-area-by-circumscriped-circle-theorem-a-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>a</mi>
+                                </math>
+                            </button>
+                            <button id="regular-polygon-area-by-circumscriped-circle-theorem-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="regular-polygon-area-by-circumscriped-circle-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Периметр правильного n-угольника
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>P</mi>
+                                <mo>=</mo>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="regular-polygon-perimeter-theorem-P-input" type="text" class="formula-quantity-input-field" placeholder="P">
+                            <input id="regular-polygon-perimeter-theorem-a-input" type="text" class="formula-quantity-input-field" placeholder="a">
+                            <input id="regular-polygon-perimeter-theorem-n-input" type="text" class="formula-quantity-input-field" placeholder="n">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="regular-polygon-perimeter-theorem-P-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>P</mi>
+                                </math>
+                            </button>
+                            <button id="regular-polygon-perimeter-theorem-a-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>a</mi>
+                                </math>
+                            </button>
+                            <button id="regular-polygon-perimeter-theorem-n-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>n</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="regular-polygon-perimeter-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь поверхности призмы
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>S</mi>
+                                <mo>=</mo>
+                                <mn>2</mn>
                                 <msub>
                                     <mi>S</mi>
-                                    <mn>1</mn>
+                                    <mtext>осн</mtext>
                                 </msub>
-                            </mfrac>
-                            <mo>=</mo>
-                            <msup>
-                                <mi>k</mi>
+                                <mo>+</mo>
+                                <msub>
+                                    <mi>S</mi>
+                                    <mtext>бок</mtext>
+                                </msub>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="prism-area-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="prism-area-theorem-Sb-input" type="text" class="formula-quantity-input-field" placeholder="Sосн">
+                            <input id="prism-area-theorem-Ss-input" type="text" class="formula-quantity-input-field" placeholder="Sбок">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="prism-area-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="prism-area-theorem-Sb-button" class="formula-quantity-button">
+                                <math>
+                                    <msub>
+                                        <mi>S</mi>
+                                        <mtext>осн</mtext>
+                                    </msub>
+                                </math>
+                            </button>
+                            <button id="prism-area-theorem-Ss-button" class="formula-quantity-button">
+                                <math>
+                                    <msub>
+                                        <mi>S</mi>
+                                        <mtext>бок</mtext>
+                                    </msub>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="prism-area-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Объём призмы
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>V</mi>
+                                <mo>=</mo>
+                                <msub>
+                                    <mi>S</mi>
+                                    <mtext>осн</mtext>
+                                </msub>
+                                <mi>h</mi>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="prism-volume-theorem-V-input" type="text" class="formula-quantity-input-field" placeholder="V">
+                            <input id="prism-volume-theorem-Sb-input" type="text" class="formula-quantity-input-field" placeholder="Sb">
+                            <input id="prism-volume-theorem-h-input" type="text" class="formula-quantity-input-field" placeholder="h">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="prism-volume-theorem-V-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>V</mi>
+                                </math>
+                            </button>
+                            <button id="prism-volume-theorem-Sb-button" class="formula-quantity-button">
+                                <math>
+                                    <msub>
+                                        <mi>S</mi>
+                                        <mtext>осн</mtext>
+                                    </msub>
+                                </math>
+                            </button>
+                            <button id="prism-volume-theorem-h-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>h</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="prism-volume-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь поверхности цилиндра
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>S</mi>
+                                <mo>=</mo>
                                 <mn>2</mn>
-                            </msup>
-                        </math>
-                    </p>
-                    <div class="formula-inputs-card">
-                        <input id="figure-area-by-similarity-coefficient-theorem-S2-input" type="text" class="formula-input-field" placeholder="S2">
-                        <input id="figure-area-by-similarity-coefficient-theorem-S1-input" type="text" class="formula-input-field" placeholder="S1">
-                        <input id="figure-area-by-similarity-coefficient-theorem-k-input" type="text" class="formula-input-field" placeholder="k">
+                                <mi>π</mi>
+                                <mi>R</mi>
+                                <mo>(</mo>
+                                <mi>R</mi>
+                                <mo>+</mo>
+                                <mi>h</mi>
+                                <mo>)</mo>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="cylinder-area-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="cylinder-area-theorem-pi-input" type="text" class="formula-quantity-input-field" placeholder="π">
+                            <input id="cylinder-area-theorem-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                            <input id="cylinder-area-theorem-h-input" type="text" class="formula-quantity-input-field" placeholder="h">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="cylinder-area-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="cylinder-area-theorem-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                            <button id="cylinder-area-theorem-h-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>h</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="cylinder-area-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <div class="formula-buttons-card">
-                        <button id="figure-area-by-similarity-coefficient-theorem-S2-button" class="formula-button">
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Объём цилиндра
+                        </p>
+                        <p class="formula-object">
                             <math>
-                                <mi>S2</mi>
+                                <mi>V</mi>
+                                <mo>=</mo>
+                                <mi>π</mi>
+                                <msup>
+                                    <mi>R</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mi>h</mi>
                             </math>
-                        </button>
-                        <button id="figure-area-by-similarity-coefficient-theorem-S1-button" class="formula-button">
-                            <math>
-                                <mi>S1</mi>
-                            </math>
-                        </button>
-                        <button id="figure-area-by-similarity-coefficient-theorem-k-button" class="formula-button">
-                            <math>
-                                <mi>k</mi>
-                            </math>
-                        </button>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="cylinder-volume-theorem-V-input" type="text" class="formula-quantity-input-field" placeholder="V">
+                            <input id="cylinder-volume-theorem-pi-input" type="text" class="formula-quantity-input-field" placeholder="π">
+                            <input id="cylinder-volume-theorem-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                            <input id="cylinder-volume-theorem-h-input" type="text" class="formula-quantity-input-field" placeholder="h">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="cylinder-volume-theorem-V-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>V</mi>
+                                </math>
+                            </button>
+                            <button id="cylinder-volume-theorem-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                            <button id="cylinder-volume-theorem-h-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>h</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="cylinder-volume-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
                     </div>
-                    <p id="figure-area-by-similarity-coefficient-theorem-answer-output" class="formula-answer-field">
-                        Физмат-калькулятор ждёт Вашего ввода!
-                    </p>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь поверхности конуса
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>V</mi>
+                                <mo>=</mo>
+                                <mi>π</mi>
+                                <mi>R</mi>
+                                <mo>(</mo>
+                                <mi>R</mi>
+                                <mo>+</mo>
+                                <mi>l</mi>
+                                <mo>)</mo>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="cone-area-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="cone-area-theorem-pi-input" type="text" class="formula-quantity-input-field" placeholder="π">
+                            <input id="cone-area-theorem-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                            <input id="cone-area-theorem-l-input" type="text" class="formula-quantity-input-field" placeholder="l">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="cone-area-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="cone-area-theorem-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                            <button id="cone-area-theorem-l-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>l</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="cone-area-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Объём конуса
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>V</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mn>1</mn>
+                                    <mn>3</mn>
+                                </mfrac>
+                                <mi>π</mi>
+                                <msup>
+                                    <mi>R</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mi>h</mi>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="cone-volume-theorem-V-input" type="text" class="formula-quantity-input-field" placeholder="V">
+                            <input id="cone-volume-theorem-pi-input" type="text" class="formula-quantity-input-field" placeholder="π">
+                            <input id="cone-volume-theorem-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                            <input id="cone-volume-theorem-h-input" type="text" class="formula-quantity-input-field" placeholder="h">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="cone-volume-theorem-V-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>V</mi>
+                                </math>
+                            </button>
+                            <button id="cone-volume-theorem-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                            <button id="cone-volume-theorem-h-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>h</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="cone-volume-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Площадь поверхности сферы
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>S</mi>
+                                <mo>=</mo>
+                                <mn>4</mn>
+                                <mi>π</mi>
+                                <msup>
+                                    <mi>R</mi>
+                                    <mn>2</mn>
+                                </msup>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="sphere-area-theorem-S-input" type="text" class="formula-quantity-input-field" placeholder="S">
+                            <input id="sphere-area-theorem-pi-input" type="text" class="formula-quantity-input-field" placeholder="π">
+                            <input id="sphere-area-theorem-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="sphere-area-theorem-S-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>S</mi>
+                                </math>
+                            </button>
+                            <button id="sphere-area-theorem-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="sphere-area-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
+                    <div class="formula-card">
+                        <p class="formula-name">
+                            Объём шара
+                        </p>
+                        <p class="formula-object">
+                            <math>
+                                <mi>V</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mn>4</mn>
+                                    <mn>3</mn>
+                                </mfrac>
+                                <mi>π</mi>
+                                <msup>
+                                    <mi>R</mi>
+                                    <mn>3</mn>
+                                </msup>
+                            </math>
+                        </p>
+                        <div class="formula-quantities-inputs-card">
+                            <input id="sphere-volume-theorem-V-input" type="text" class="formula-quantity-input-field" placeholder="V">
+                            <input id="sphere-volume-theorem-pi-input" type="text" class="formula-quantity-input-field" placeholder="π">
+                            <input id="sphere-volume-theorem-R-input" type="text" class="formula-quantity-input-field" placeholder="R">
+                        </div>
+                        <div class="formula-quantities-buttons-card">
+                            <button id="sphere-volume-theorem-V-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>V</mi>
+                                </math>
+                            </button>
+                            <button id="sphere-volume-theorem-R-button" class="formula-quantity-button">
+                                <math>
+                                    <mi>R</mi>
+                                </math>
+                            </button>
+                        </div>
+                        <p id="sphere-volume-theorem-answer-output" class="formula-answer-field">
+                            Физмат-калькулятор ждёт Вашего ввода!
+                        </p>
+                    </div>
                 </div>
             </div>
         </main>
         <footer>
-            <div id="solver-footer" class="solver-footer-background solver-footer-menu">
-                
+            <div class="solver-footer-background">
+                <div class="solver-footer-column">
+                    <p class="solver-footer-column-title">
+                        Навигация
+                    </p>
+                    <div class="solver-footer-widgets">
+                        <a class="solver-footer-link" href="/">
+                            Главная
+                        </a>
+                        <a class="solver-footer-link" href="/math/algebra">
+                            Алгебра
+                        </a>
+                        <a class="solver-footer-link" href="/math/probstats">
+                            ТВиС
+                        </a>
+                        <a class="solver-footer-link" href="/physics/electromagnetics">
+                            Электромагнетизм
+                        </a>
+                        <a class="solver-footer-link" href="/physics/mechanics">
+                            Механика
+                        </a>
+                        <a class="solver-footer-link" href="/physics/thermodynamics">
+                            Термодинамика
+                        </a>
+                    </div>
+                </div>
+                <div class="solver-footer-column">
+                    <p class="solver-footer-column-title">
+                        Информация
+                    </p>
+                    <div class="solver-footer-widgets">
+                        <p class="solver-copyright-text">
+                            © Copyright 2026 bfich-guy
+                        </p>
+                        <p class="solver-copyright-text">
+                            Все права защищены
+                        </p>
+                    </div>
+                </div>
             </div>
         </footer>
-        <script src="/static/js/pagesetup.js" type="module"></script>
         <script src="/static/js/calculateformula.js" type="module"></script>
+        <script src="/static/js/searchingformula.js" type="module"></script>
     </body>
 </html>

@@ -30,6 +30,7 @@ class Files(Enum):
 
     ALGEBRA = "algebra"
     GEOMETRY = "geometry"
+    PROBSTATS = "probstats"
 
     ELECTROMAGNETICS = "electromagnetics"
     MECHANICS = "mechanics"
@@ -89,6 +90,7 @@ class Endpoints(Enum):
 
     ALGEBRA = f"/{Files.ALGEBRA.value}"
     GEOMETRY = f"/{Files.GEOMETRY.value}"
+    PROBSTATS = f"/{Files.PROBSTATS.value}"
 
     ELECTROMAGNETICS = f"/{Files.ELECTROMAGNETICS.value}"
     MECHANICS = f"/{Files.MECHANICS.value}"
@@ -104,6 +106,7 @@ class Templates(Enum):
 
     ALGEBRA = f"/{Folders.MATH.value}/{Files.ALGEBRA.value}.{FileExtenstions.HTML.value}"
     GEOMETRY = f"/{Folders.MATH.value}/{Files.GEOMETRY.value}.{FileExtenstions.HTML.value}"
+    PROBSTATS = f"/{Folders.MATH.value}/{Files.PROBSTATS.value}.{FileExtenstions.HTML.value}"
 
     ELECTROMAGNETICS = f"/{Folders.PHYSICS.value}/{Files.ELECTROMAGNETICS.value}.{FileExtenstions.HTML.value}"
     MECHANICS = f"/{Folders.PHYSICS.value}/{Files.MECHANICS.value}.{FileExtenstions.HTML.value}"

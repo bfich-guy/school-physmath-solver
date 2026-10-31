@@ -1554,6 +1554,962 @@ export const FormulasData = {
             "FigureAreaBySimilarityCoefficientTheorem", "get_k",
         ],
     },
+    "polygon-angles-sum-theorem-S-button": {
+        "input": {
+            "polygon-angles-sum-theorem-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "polygon-angles-sum-theorem-answer-output",
+        },
+        "formula": [
+            "PolygonAnglesSumTheorem", "get_S",
+        ],
+    },
+    "polygon-angles-sum-theorem-n-button": {
+        "input": {
+            "polygon-angles-sum-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "polygon-angles-sum-theorem-answer-output",
+        },
+        "formula": [
+            "PolygonAnglesSumTheorem", "get_n",
+        ],
+    },
+    "regular-polygon-angle-theorem-a-button": {
+        "input": {
+            "regular-polygon-angle-theorem-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "regular-polygon-angle-theorem-answer-output",
+        },
+        "formula": [
+            "RegularPolygonAngleTheorem", "get_a",
+        ],
+    },
+    "regular-polygon-angle-theorem-n-button": {
+        "input": {
+            "regular-polygon-angle-theorem-a-input": {
+                "name": "a",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "regular-polygon-angle-theorem-answer-output",
+        },
+        "formula": [
+            "RegularPolygonAngleTheorem", "get_n",
+        ],
+    },
+    "regular-polygon-area-by-circumscriped-circle-theorem-S-button": {
+        "input": {
+            "regular-polygon-area-by-circumscriped-circle-theorem-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+            "regular-polygon-area-by-circumscriped-circle-theorem-a-input": {
+                "name": "a",
+                "mode": "scalar",
+            },
+            "regular-polygon-area-by-circumscriped-circle-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "regular-polygon-area-by-circumscriped-circle-theorem-answer-output",
+        },
+        "formula": [
+            "RegularPolygonAreaByCircumscripedCircleTheorem", "get_S",
+        ],
+    },
+    "regular-polygon-area-by-circumscriped-circle-theorem-n-button": {
+        "input": {
+            "regular-polygon-area-by-circumscriped-circle-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+            "regular-polygon-area-by-circumscriped-circle-theorem-a-input": {
+                "name": "a",
+                "mode": "scalar",
+            },
+            "regular-polygon-area-by-circumscriped-circle-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "regular-polygon-area-by-circumscriped-circle-theorem-answer-output",
+        },
+        "formula": [
+            "RegularPolygonAreaByCircumscripedCircleTheorem", "get_n",
+        ],
+    },
+    "regular-polygon-area-by-circumscriped-circle-theorem-a-button": {
+        "input": {
+            "regular-polygon-area-by-circumscriped-circle-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+            "regular-polygon-area-by-circumscriped-circle-theorem-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+            "regular-polygon-area-by-circumscriped-circle-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "regular-polygon-area-by-circumscriped-circle-theorem-answer-output",
+        },
+        "formula": [
+            "RegularPolygonAreaByCircumscripedCircleTheorem", "get_a",
+        ],
+    },
+    "regular-polygon-area-by-circumscriped-circle-theorem-R-button": {
+        "input": {
+            "regular-polygon-area-by-circumscriped-circle-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+            "regular-polygon-area-by-circumscriped-circle-theorem-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+            "regular-polygon-area-by-circumscriped-circle-theorem-a-input": {
+                "name": "a",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "regular-polygon-area-by-circumscriped-circle-theorem-answer-output",
+        },
+        "formula": [
+            "RegularPolygonAreaByCircumscripedCircleTheorem", "get_R",
+        ],
+    },
+    "regular-polygon-perimeter-theorem-P-button": {
+        "input": {
+            "regular-polygon-perimeter-theorem-a-input": {
+                "name": "a",
+                "mode": "scalar",
+            },
+            "regular-polygon-perimeter-theorem-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "regular-polygon-perimeter-theorem-answer-output",
+        },
+        "formula": [
+            "RegularPolygonPerimeterTheorem", "get_P",
+        ],
+    },
+    "regular-polygon-perimeter-theorem-a-button": {
+        "input": {
+            "regular-polygon-perimeter-theorem-P-input": {
+                "name": "P",
+                "mode": "scalar",
+            },
+            "regular-polygon-perimeter-theorem-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "regular-polygon-perimeter-theorem-answer-output",
+        },
+        "formula": [
+            "RegularPolygonPerimeterTheorem", "get_a",
+        ],
+    },
+    "regular-polygon-perimeter-theorem-n-button": {
+        "input": {
+            "regular-polygon-perimeter-theorem-P-input": {
+                "name": "P",
+                "mode": "scalar",
+            },
+            "regular-polygon-perimeter-theorem-a-input": {
+                "name": "a",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "regular-polygon-perimeter-theorem-answer-output",
+        },
+        "formula": [
+            "RegularPolygonPerimeterTheorem", "get_n",
+        ],
+    },
+    "prism-area-theorem-S-button": {
+        "input": {
+            "prism-area-theorem-Sb-input": {
+                "name": "Sb",
+                "mode": "scalar",
+            },
+            "prism-area-theorem-Ss-input": {
+                "name": "Ss",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "prism-area-theorem-answer-output",
+        },
+        "formula": [
+            "PrismAreaTheorem", "get_S",
+        ],
+    },
+    "prism-area-theorem-Sb-button": {
+        "input": {
+            "prism-area-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+            "prism-area-theorem-Ss-input": {
+                "name": "Ss",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "prism-area-theorem-answer-output",
+        },
+        "formula": [
+            "PrismAreaTheorem", "get_Sb",
+        ],
+    },
+    "prism-area-theorem-Ss-button": {
+        "input": {
+            "prism-area-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+            "prism-area-theorem-Sb-input": {
+                "name": "Sb",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "prism-area-theorem-answer-output",
+        },
+        "formula": [
+            "PrismAreaTheorem", "get_Ss",
+        ],
+    },
+    "prism-volume-theorem-V-button": {
+        "input": {
+            "prism-volume-theorem-Sb-input": {
+                "name": "Sb",
+                "mode": "scalar",
+            },
+            "prism-volume-theorem-h-input": {
+                "name": "h",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "prism-volume-theorem-answer-output",
+        },
+        "formula": [
+            "PrismVolumeTheorem", "get_V",
+        ],
+    },
+    "prism-volume-theorem-Sb-button": {
+        "input": {
+            "prism-volume-theorem-V-input": {
+                "name": "V",
+                "mode": "scalar",
+            },
+            "prism-volume-theorem-h-input": {
+                "name": "h",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "prism-volume-theorem-answer-output",
+        },
+        "formula": [
+            "PrismVolumeTheorem", "get_Sb",
+        ],
+    },
+    "prism-volume-theorem-h-button": {
+        "input": {
+            "prism-volume-theorem-V-input": {
+                "name": "V",
+                "mode": "scalar",
+            },
+            "prism-volume-theorem-Sb-input": {
+                "name": "Sb",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "prism-volume-theorem-answer-output",
+        },
+        "formula": [
+            "PrismVolumeTheorem", "get_h",
+        ],
+    },
+    "cylinder-area-theorem-S-button": {
+        "input": {
+            "cylinder-area-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cylinder-area-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+            "cylinder-area-theorem-h-input": {
+                "name": "h",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cylinder-area-theorem-answer-output",
+        },
+        "formula": [
+            "CylinderAreaTheorem", "get_S",
+        ],
+    },
+    "cylinder-area-theorem-R-button": {
+        "input": {
+            "cylinder-area-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+            "cylinder-area-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cylinder-area-theorem-h-input": {
+                "name": "h",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cylinder-area-theorem-answer-output",
+        },
+        "formula": [
+            "CylinderAreaTheorem", "get_R",
+        ],
+    },
+    "cylinder-area-theorem-h-button": {
+        "input": {
+            "cylinder-area-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+            "cylinder-area-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cylinder-area-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cylinder-area-theorem-answer-output",
+        },
+        "formula": [
+            "CylinderAreaTheorem", "get_h",
+        ],
+    },
+    "cylinder-volume-theorem-V-button": {
+        "input": {
+            "cylinder-volume-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cylinder-volume-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+            "cylinder-volume-theorem-h-input": {
+                "name": "h",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cylinder-volume-theorem-answer-output",
+        },
+        "formula": [
+            "CylinderVolumeTheorem", "get_V",
+        ],
+    },
+    "cylinder-volume-theorem-R-button": {
+        "input": {
+            "cylinder-volume-theorem-V-input": {
+                "name": "V",
+                "mode": "scalar",
+            },
+            "cylinder-volume-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cylinder-volume-theorem-h-input": {
+                "name": "h",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cylinder-volume-theorem-answer-output",
+        },
+        "formula": [
+            "CylinderVolumeTheorem", "get_R",
+        ],
+    },
+    "cylinder-volume-theorem-h-button": {
+        "input": {
+            "cylinder-volume-theorem-V-input": {
+                "name": "V",
+                "mode": "scalar",
+            },
+            "cylinder-volume-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cylinder-volume-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cylinder-volume-theorem-answer-output",
+        },
+        "formula": [
+            "CylinderVolumeTheorem", "get_h",
+        ],
+    },
+    "cone-area-theorem-S-button": {
+        "input": {
+            "cone-area-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cone-area-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+            "cone-area-theorem-l-input": {
+                "name": "l",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cone-area-theorem-answer-output",
+        },
+        "formula": [
+            "ConeAreaTheorem", "get_S",
+        ],
+    },
+    "cone-area-theorem-R-button": {
+        "input": {
+            "cone-area-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+            "cone-area-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cone-area-theorem-l-input": {
+                "name": "l",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cone-area-theorem-answer-output",
+        },
+        "formula": [
+            "ConeAreaTheorem", "get_R",
+        ],
+    },
+    "cone-area-theorem-l-button": {
+        "input": {
+            "cone-area-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+            "cone-area-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cone-area-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cone-area-theorem-answer-output",
+        },
+        "formula": [
+            "ConeAreaTheorem", "get_l",
+        ],
+    },
+    "cone-volume-theorem-V-button": {
+        "input": {
+            "cone-volume-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cone-volume-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+            "cone-volume-theorem-h-input": {
+                "name": "h",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cone-volume-theorem-answer-output",
+        },
+        "formula": [
+            "ConeVolumeTheorem", "get_V",
+        ],
+    },
+    "cone-volume-theorem-R-button": {
+        "input": {
+            "cone-volume-theorem-V-input": {
+                "name": "V",
+                "mode": "scalar",
+            },
+            "cone-volume-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cone-volume-theorem-h-input": {
+                "name": "h",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cone-volume-theorem-answer-output",
+        },
+        "formula": [
+            "ConeVolumeTheorem", "get_R",
+        ],
+    },
+    "cone-volume-theorem-h-button": {
+        "input": {
+            "cone-volume-theorem-V-input": {
+                "name": "V",
+                "mode": "scalar",
+            },
+            "cone-volume-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "cone-volume-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "cone-volume-theorem-answer-output",
+        },
+        "formula": [
+            "ConeVolumeTheorem", "get_h",
+        ],
+    },
+    "sphere-area-theorem-S-button": {
+        "input": {
+            "sphere-area-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "sphere-area-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "sphere-area-theorem-answer-output",
+        },
+        "formula": [
+            "SphereAreaTheorem", "get_S",
+        ],
+    },
+    "sphere-area-theorem-R-button": {
+        "input": {
+            "sphere-area-theorem-S-input": {
+                "name": "S",
+                "mode": "scalar",
+            },
+            "sphere-area-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "sphere-area-theorem-answer-output",
+        },
+        "formula": [
+            "SphereAreaTheorem", "get_R",
+        ],
+    },
+    "sphere-volume-theorem-V-button": {
+        "input": {
+            "sphere-volume-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "sphere-volume-theorem-R-input": {
+                "name": "R",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "sphere-volume-theorem-answer-output",
+        },
+        "formula": [
+            "SphereVolumeTheorem", "get_V",
+        ],
+    },
+    "sphere-volume-theorem-R-button": {
+        "input": {
+            "sphere-volume-theorem-V-input": {
+                "name": "V",
+                "mode": "scalar",
+            },
+            "sphere-volume-theorem-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "sphere-volume-theorem-answer-output",
+        },
+        "formula": [
+            "SphereVolumeTheorem", "get_R",
+        ],
+    },
+    "number-factorial-fn-button": {
+        "input": {
+            "number-factorial-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "number-factorial-answer-output",
+        },
+        "formula": [
+            "NumberFactorial", "get_fn",
+        ],
+    },
+    "number-factorial-n-button": {
+        "input": {
+            "number-factorial-fn-input": {
+                "name": "fn",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "number-factorial-answer-output",
+        },
+        "formula": [
+            "NumberFactorial", "get_n",
+        ],
+    },
+    "binomial-coefficient-Ckn-button": {
+        "input": {
+            "binomial-coefficient-nfct-input": {
+                "name": "nfct",
+                "mode": "scalar",
+            },
+            "binomial-coefficient-kfct-input": {
+                "name": "kfct",
+                "mode": "scalar",
+            },
+            "binomial-coefficient-nminuskfct-input": {
+                "name": "nminuskfct",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "binomial-coefficient-answer-output",
+        },
+        "formula": [
+            "BinomialCoefficient", "get_Ckn",
+        ],
+    },
+    "binomial-coefficient-nfct-button": {
+        "input": {
+            "binomial-coefficient-Ckn-input": {
+                "name": "Ckn",
+                "mode": "scalar",
+            },
+            "binomial-coefficient-kfct-input": {
+                "name": "kfct",
+                "mode": "scalar",
+            },
+            "binomial-coefficient-nminuskfct-input": {
+                "name": "nminuskfct",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "binomial-coefficient-answer-output",
+        },
+        "formula": [
+            "BinomialCoefficient", "get_nfct",
+        ],
+    },
+    "binomial-coefficient-kfct-button": {
+        "input": {
+            "binomial-coefficient-Ckn-input": {
+                "name": "Ckn",
+                "mode": "scalar",
+            },
+            "binomial-coefficient-nfct-input": {
+                "name": "nfct",
+                "mode": "scalar",
+            },
+            "binomial-coefficient-nminuskfct-input": {
+                "name": "nminuskfct",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "binomial-coefficient-answer-output",
+        },
+        "formula": [
+            "BinomialCoefficient", "get_kfct",
+        ],
+    },
+    "binomial-coefficient-nminuskfct-button": {
+        "input": {
+            "binomial-coefficient-Ckn-input": {
+                "name": "Ckn",
+                "mode": "scalar",
+            },
+            "binomial-coefficient-nfct-input": {
+                "name": "nfct",
+                "mode": "scalar",
+            },
+            "binomial-coefficient-kfct-input": {
+                "name": "kfct",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "binomial-coefficient-answer-output",
+        },
+        "formula": [
+            "BinomialCoefficient", "get_nminuskfct",
+        ],
+    },
+    "expected-value-MX-button": {
+        "input": {
+            "expected-value-x-input": {
+                "name": "x",
+                "mode": "vector",
+            },
+            "expected-value-p-input": {
+                "name": "p",
+                "mode": "vector",
+            },
+        },
+        "output": {
+            "id": "expected-value-answer-output",
+        },
+        "formula": [
+            "ExpectedValue", "get_MX",
+        ],
+    },
+    "bernoulli-probability-theory-Pnk-button": {
+        "input": {
+            "bernoulli-probability-theory-Ckn-input": {
+                "name": "Ckn",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-p-input": {
+                "name": "p",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-q-input": {
+                "name": "q",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-k-input": {
+                "name": "k",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "bernoulli-probability-theory-answer-output",
+        },
+        "formula": [
+            "BernoulliProbabilityTheory", "get_Pnk",
+        ],
+    },
+    "bernoulli-probability-theory-Ckn-button": {
+        "input": {
+            "bernoulli-probability-theory-Pnk-input": {
+                "name": "Pnk",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-p-input": {
+                "name": "p",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-q-input": {
+                "name": "q",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-k-input": {
+                "name": "k",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "bernoulli-probability-theory-answer-output",
+        },
+        "formula": [
+            "BernoulliProbabilityTheory", "get_Ckn",
+        ],
+    },
+    "bernoulli-probability-theory-p-button": {
+        "input": {
+            "bernoulli-probability-theory-Pnk-input": {
+                "name": "Pnk",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-Ckn-input": {
+                "name": "Ckn",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-q-input": {
+                "name": "q",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-k-input": {
+                "name": "k",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "bernoulli-probability-theory-answer-output",
+        },
+        "formula": [
+            "BernoulliProbabilityTheory", "get_p",
+        ],
+    },
+    "bernoulli-probability-theory-q-button": {
+        "input": {
+            "bernoulli-probability-theory-Pnk-input": {
+                "name": "Pnk",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-Ckn-input": {
+                "name": "Ckn",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-p-input": {
+                "name": "p",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-k-input": {
+                "name": "k",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "bernoulli-probability-theory-answer-output",
+        },
+        "formula": [
+            "BernoulliProbabilityTheory", "get_q",
+        ],
+    },
+    "bernoulli-probability-theory-k-button": {
+        "input": {
+            "bernoulli-probability-theory-Pnk-input": {
+                "name": "Pnk",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-Ckn-input": {
+                "name": "Ckn",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-p-input": {
+                "name": "p",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-q-input": {
+                "name": "q",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-n-input": {
+                "name": "n",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "bernoulli-probability-theory-answer-output",
+        },
+        "formula": [
+            "BernoulliProbabilityTheory", "get_k",
+        ],
+    },
+    "bernoulli-probability-theory-n-button": {
+        "input": {
+            "bernoulli-probability-theory-Pnk-input": {
+                "name": "Pnk",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-Ckn-input": {
+                "name": "Ckn",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-p-input": {
+                "name": "p",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-q-input": {
+                "name": "q",
+                "mode": "scalar",
+            },
+            "bernoulli-probability-theory-k-input": {
+                "name": "k",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "bernoulli-probability-theory-answer-output",
+        },
+        "formula": [
+            "BernoulliProbabilityTheory", "get_n",
+        ],
+    },
     "ohms-specific-law-U-button": {
         "input": {
             "ohms-specific-law-I-input": {
@@ -2398,6 +3354,376 @@ export const FormulasData = {
             "MagneticFluxToContourLaw", "get_cosa",
         ],
     },
+    "self-induction-flux-law-phi-button": {
+        "input": {
+            "self-induction-flux-law-L-input": {
+                "name": "L",
+                "mode": "scalar",
+            },
+            "self-induction-flux-law-I-input": {
+                "name": "I",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "self-induction-flux-law-answer-output",
+        },
+        "formula": [
+            "SelfInductionFluxLaw", "get_phi",
+        ],
+    },
+    "self-induction-flux-law-L-button": {
+        "input": {
+            "self-induction-flux-law-phi-input": {
+                "name": "phi",
+                "mode": "scalar",
+            },
+            "self-induction-flux-law-I-input": {
+                "name": "I",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "self-induction-flux-law-answer-output",
+        },
+        "formula": [
+            "SelfInductionFluxLaw", "get_L",
+        ],
+    },
+    "self-induction-flux-law-I-button": {
+        "input": {
+            "self-induction-flux-law-phi-input": {
+                "name": "phi",
+                "mode": "scalar",
+            },
+            "self-induction-flux-law-L-input": {
+                "name": "L",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "self-induction-flux-law-answer-output",
+        },
+        "formula": [
+            "SelfInductionFluxLaw", "get_I",
+        ],
+    },
+    "magnetic-field-energy-law-W-button": {
+        "input": {
+            "magnetic-field-energy-law-L-input": {
+                "name": "L",
+                "mode": "scalar",
+            },
+            "magnetic-field-energy-law-I-input": {
+                "name": "I",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "magnetic-field-energy-law-answer-output",
+        },
+        "formula": [
+            "MagneticFieldEnergyLaw", "get_W",
+        ],
+    },
+    "magnetic-field-energy-law-L-button": {
+        "input": {
+            "magnetic-field-energy-law-W-input": {
+                "name": "W",
+                "mode": "scalar",
+            },
+            "magnetic-field-energy-law-I-input": {
+                "name": "I",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "magnetic-field-energy-law-answer-output",
+        },
+        "formula": [
+            "MagneticFieldEnergyLaw", "get_L",
+        ],
+    },
+    "magnetic-field-energy-law-I-button": {
+        "input": {
+            "magnetic-field-energy-law-W-input": {
+                "name": "W",
+                "mode": "scalar",
+            },
+            "magnetic-field-energy-law-L-input": {
+                "name": "L",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "magnetic-field-energy-law-answer-output",
+        },
+        "formula": [
+            "MagneticFieldEnergyLaw", "get_I",
+        ],
+    },
+    "lentz-law-Esi-button": {
+        "input": {
+            "lentz-law-L-input": {
+                "name": "L",
+                "mode": "scalar",
+            },
+            "lentz-law-DI-input": {
+                "name": "DI",
+                "mode": "scalar",
+            },
+            "lentz-law-Dt-input": {
+                "name": "Dt",
+                "mode": "scalar",
+            },
+            },
+        "output": {
+            "id": "lentz-law-answer-output",
+        },
+        "formula": [
+            "LentzLaw", "get_Esi",
+        ],
+    },
+    "lentz-law-L-button": {
+        "input": {
+            "lentz-law-Esi-input": {
+                "name": "Esi",
+                "mode": "scalar",
+            },
+            "lentz-law-DI-input": {
+                "name": "DI",
+                "mode": "scalar",
+            },
+            "lentz-law-Dt-input": {
+                "name": "Dt",
+                "mode": "scalar",
+            },
+            },
+        "output": {
+            "id": "lentz-law-answer-output",
+        },
+        "formula": [
+            "LentzLaw", "get_L",
+        ],
+    },
+    "lentz-law-DI-button": {
+        "input": {
+            "lentz-law-Esi-input": {
+                "name": "Esi",
+                "mode": "scalar",
+            },
+            "lentz-law-L-input": {
+                "name": "L",
+                "mode": "scalar",
+            },
+            "lentz-law-Dt-input": {
+                "name": "Dt",
+                "mode": "scalar",
+            },
+            },
+        "output": {
+            "id": "lentz-law-answer-output",
+        },
+        "formula": [
+            "LentzLaw", "get_DI",
+        ],
+    },
+    "lentz-law-Dt-button": {
+        "input": {
+            "lentz-law-Esi-input": {
+                "name": "Esi",
+                "mode": "scalar",
+            },
+            "lentz-law-L-input": {
+                "name": "L",
+                "mode": "scalar",
+            },
+            "lentz-law-DI-input": {
+                "name": "DI",
+                "mode": "scalar",
+            },
+            },
+        "output": {
+            "id": "lentz-law-answer-output",
+        },
+        "formula": [
+            "LentzLaw", "get_Dt",
+        ],
+    },
+    "thomsons-formula-T-button": {
+        "input": {
+            "thomsons-formula-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "thomsons-formula-L-input": {
+                "name": "L",
+                "mode": "scalar",
+            },
+            "thomsons-formula-C-input": {
+                "name": "C",
+                "mode": "scalar",
+            },
+            },
+        "output": {
+            "id": "thomsons-formula-answer-output",
+        },
+        "formula": [
+            "ThomsonsFormula", "get_T",
+        ],
+    },
+    "thomsons-formula-L-button": {
+        "input": {
+            "thomsons-formula-T-input": {
+                "name": "T",
+                "mode": "scalar",
+            },
+            "thomsons-formula-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "thomsons-formula-C-input": {
+                "name": "C",
+                "mode": "scalar",
+            },
+            },
+        "output": {
+            "id": "thomsons-formula-answer-output",
+        },
+        "formula": [
+            "ThomsonsFormula", "get_L",
+        ],
+    },
+    "thomsons-formula-C-button": {
+        "input": {
+            "thomsons-formula-T-input": {
+                "name": "T",
+                "mode": "scalar",
+            },
+            "thomsons-formula-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "thomsons-formula-L-input": {
+                "name": "L",
+                "mode": "scalar",
+            },
+            },
+        "output": {
+            "id": "thomsons-formula-answer-output",
+        },
+        "formula": [
+            "ThomsonsFormula", "get_C",
+        ],
+    },
+    "capacitor-electric-charge-law-Q-button": {
+        "input": {
+            "capacitor-electric-charge-law-C-input": {
+                "name": "C",
+                "mode": "scalar",
+            },
+            "capacitor-electric-charge-law-U-input": {
+                "name": "U",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "capacitor-electric-charge-law-answer-output",
+        },
+        "formula": [
+            "CapacitorElectricChargeLaw", "get_Q",
+        ],
+    },
+    "capacitor-electric-charge-law-C-button": {
+        "input": {
+            "capacitor-electric-charge-law-Q-input": {
+                "name": "Q",
+                "mode": "scalar",
+            },
+            "capacitor-electric-charge-law-U-input": {
+                "name": "U",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "capacitor-electric-charge-law-answer-output",
+        },
+        "formula": [
+            "CapacitorElectricChargeLaw", "get_C",
+        ],
+    },
+    "capacitor-electric-charge-law-U-button": {
+        "input": {
+            "capacitor-electric-charge-law-Q-input": {
+                "name": "Q",
+                "mode": "scalar",
+            },
+            "capacitor-electric-charge-law-C-input": {
+                "name": "C",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "capacitor-electric-charge-law-answer-output",
+        },
+        "formula": [
+            "CapacitorElectricChargeLaw", "get_U",
+        ],
+    },
+    "charged-capacitor-energy-law-W-button": {
+        "input": {
+            "charged-capacitor-energy-law-C-input": {
+                "name": "C",
+                "mode": "scalar",
+            },
+            "charged-capacitor-energy-law-U-input": {
+                "name": "U",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "charged-capacitor-energy-law-answer-output",
+        },
+        "formula": [
+            "ChargedCapacitorEnergyLaw", "get_W",
+        ],
+    },
+    "charged-capacitor-energy-law-C-button": {
+        "input": {
+            "charged-capacitor-energy-law-W-input": {
+                "name": "W",
+                "mode": "scalar",
+            },
+            "charged-capacitor-energy-law-U-input": {
+                "name": "U",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "charged-capacitor-energy-law-answer-output",
+        },
+        "formula": [
+            "ChargedCapacitorEnergyLaw", "get_C",
+        ],
+    },
+    "charged-capacitor-energy-law-U-button": {
+        "input": {
+            "charged-capacitor-energy-law-W-input": {
+                "name": "W",
+                "mode": "scalar",
+            },
+            "charged-capacitor-energy-law-C-input": {
+                "name": "C",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "charged-capacitor-energy-law-answer-output",
+        },
+        "formula": [
+            "ChargedCapacitorEnergyLaw", "get_U",
+        ],
+    },
     "newtons-second-law-F-button": {
         "input": {
             "newtons-second-law-m-input": {
@@ -2970,6 +4296,138 @@ export const FormulasData = {
         },
         "formula": [
             "MechanicalEfficiencyLaw", "get_At",
+        ],
+    },
+    "spring-pendulum-period-law-T-button": {
+        "input": {
+            "spring-pendulum-period-law-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "spring-pendulum-period-law-m-input": {
+                "name": "m",
+                "mode": "scalar",
+            },
+            "spring-pendulum-period-law-k-input": {
+                "name": "k",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "spring-pendulum-period-law-answer-output",
+        },
+        "formula": [
+            "SpringPendulumPeriodLaw", "get_T",
+        ],
+    },
+    "spring-pendulum-period-law-m-button": {
+        "input": {
+            "spring-pendulum-period-law-T-input": {
+                "name": "T",
+                "mode": "scalar",
+            },
+            "spring-pendulum-period-law-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "spring-pendulum-period-law-k-input": {
+                "name": "k",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "spring-pendulum-period-law-answer-output",
+        },
+        "formula": [
+            "SpringPendulumPeriodLaw", "get_m",
+        ],
+    },
+    "spring-pendulum-period-law-k-button": {
+        "input": {
+            "spring-pendulum-period-law-T-input": {
+                "name": "T",
+                "mode": "scalar",
+            },
+            "spring-pendulum-period-law-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "spring-pendulum-period-law-m-input": {
+                "name": "m",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "spring-pendulum-period-law-answer-output",
+        },
+        "formula": [
+            "SpringPendulumPeriodLaw", "get_k",
+        ],
+    },
+    "simple-pendulum-period-law-T-button": {
+        "input": {
+            "simple-pendulum-period-law-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "simple-pendulum-period-law-l-input": {
+                "name": "l",
+                "mode": "scalar",
+            },
+            "simple-pendulum-period-law-g-input": {
+                "name": "g",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "simple-pendulum-period-law-answer-output",
+        },
+        "formula": [
+            "SimplePendulumPeriodLaw", "get_T",
+        ],
+    },
+    "simple-pendulum-period-law-l-button": {
+        "input": {
+            "simple-pendulum-period-law-T-input": {
+                "name": "T",
+                "mode": "scalar",
+            },
+            "simple-pendulum-period-law-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "simple-pendulum-period-law-g-input": {
+                "name": "g",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "simple-pendulum-period-law-answer-output",
+        },
+        "formula": [
+            "SimplePendulumPeriodLaw", "get_l",
+        ],
+    },
+    "simple-pendulum-period-law-g-button": {
+        "input": {
+            "simple-pendulum-period-law-T-input": {
+                "name": "T",
+                "mode": "scalar",
+            },
+            "simple-pendulum-period-law-pi-input": {
+                "name": "pi",
+                "mode": "scalar",
+            },
+            "simple-pendulum-period-law-l-input": {
+                "name": "l",
+                "mode": "scalar",
+            },
+        },
+        "output": {
+            "id": "simple-pendulum-period-law-answer-output",
+        },
+        "formula": [
+            "SimplePendulumPeriodLaw", "get_g",
         ],
     },
     "linear-acceleration-law-a-button": {

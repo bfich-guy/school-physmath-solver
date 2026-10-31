@@ -9,7 +9,7 @@ templates = Jinja2Templates(directory=Folders.TEMPLATES.value)
 geometry_router = APIRouter(prefix=Prefix.MATH.value)
 
 @geometry_router.get(Endpoints.GEOMETRY.value, response_class=HTMLResponse)
-def algebra(request: Request) -> HTMLResponse:
+def geometry(request: Request) -> HTMLResponse:
 
     geometry_template: HTMLResponse = templates.TemplateResponse(
         name=Templates.GEOMETRY.value,

@@ -1,5 +1,6 @@
 from calculators.math.algebra import *
 from calculators.math.geometry import *
+from calculators.math.probstats import *
 from calculators.physics.electromagnetics import *
 from calculators.physics.mechanics import *
 from calculators.physics.thermodynamics import *
@@ -41,8 +42,27 @@ TriangleAreaByInscribedCircleTheoremSolver = TriangleAreaByInscribedCircleTheore
 TriangleAreaByCircumscripedCircleTheoremSolver = TriangleAreaByCircumscripedCircleTheorem()
 TriangleSideProjectionTheoremSolver = TriangleSideProjectionTheorem()
 FigureAreaBySimilarityCoefficientTheoremSolver = FigureAreaBySimilarityCoefficientTheorem()
+PolygonAnglesSumTheoremSolver = PolygonAnglesSumTheorem()
+RegularPolygonAngleTheoremSolver = RegularPolygonAngleTheorem()
+RegularPolygonAreaByCircumscripedCircleTheoremSolver = RegularPolygonAreaByCircumscripedCircleTheorem()
+RegularPolygonPerimeterTheoremSolver = RegularPolygonPerimeterTheorem()
+PrismAreaTheoremSolver = PrismAreaTheorem()
+PrismVolumeTheoremSolver = PrismVolumeTheorem()
+CylinderAreaTheoremSolver = CylinderAreaTheorem()
+ConeAreaTheoremSolver = ConeAreaTheorem()
+ConeVolumeTheoremSolver = ConeVolumeTheorem()
+SphereAreaTheoremSolver = SphereAreaTheorem()
+SphereVolumeTheoremSolver = SphereVolumeTheorem()
 
 #endregion
+
+
+#region Probstats
+
+NumberFactorialSolver = NumberFactorial()
+BinomialCoefficientSolver = BinomialCoefficient()
+BernoulliProbabilityTheorySolver = BernoulliProbabilityTheory()
+ExpectedValueSolver = ExpectedValue()
 
 
 #region Electromagnetics
@@ -57,6 +77,12 @@ AmperesLawSolver = AmperesLaw()
 LorentzLawSolver = LorentzLaw()
 FaradaysLawSolver = FaradaysLaw()
 MagneticFluxToContourLawSolver = MagneticFluxToContourLaw()
+SelfInductionFluxLawSolver = SelfInductionFluxLaw()
+MagneticFieldEnergyLawSolver = MagneticFieldEnergyLaw()
+LentzLawSolver = LentzLaw()
+ThomsonsFormulaSolver = ThomsonsFormula()
+CapacitorElectricChargeLawSolver = CapacitorElectricChargeLaw()
+ChargedCapacitorEnergyLawSolver = ChargedCapacitorEnergyLaw()
 
 #endregion
 
@@ -73,6 +99,8 @@ PotentialEnergyLawSolver = PotentialEnergyLaw()
 MechanicalWorkLawSolver = MechanicalWorkLaw()
 MechanicalPowerLawSolver = MechanicalPowerLaw()
 MechanicalEfficiencyLawSolver = MechanicalEfficiencyLaw()
+SpringPendulumPeriodLawSolver = SpringPendulumPeriodLaw()
+SimplePendulumPeriodLawSolver = SimplePendulumPeriodLaw()
 LinearAccelerationLawSolver = LinearAccelerationLaw()
 UniformlyAcceleratedRectilinearMotionLawSolver = UniformlyAcceleratedRectilinearMotionLaw()
 CentripetalAccelerationLawSolver = CentripetalAccelerationLaw()
@@ -92,6 +120,8 @@ FusionHeatLawSolver = FusionHeatLaw()
 VaporizationHeatLawSolver = VaporizationHeatLaw()
 MendeleevClapeyronLawSolver = MendeleevClapeyronLaw()
 MolarMassLawSolver = MolarMassLaw()
+
+#endregion
 
 
 formulas_map: dict = {
@@ -172,6 +202,50 @@ formulas_map: dict = {
     ("FigureAreaBySimilarityCoefficientTheorem", "get_S2"): FigureAreaBySimilarityCoefficientTheoremSolver.get_S2,
     ("FigureAreaBySimilarityCoefficientTheorem", "get_S1"): FigureAreaBySimilarityCoefficientTheoremSolver.get_S1,
     ("FigureAreaBySimilarityCoefficientTheorem", "get_k"): FigureAreaBySimilarityCoefficientTheoremSolver.get_k,
+    ("PolygonAnglesSumTheorem", "get_S"): PolygonAnglesSumTheoremSolver.get_S,
+    ("PolygonAnglesSumTheorem", "get_n"): PolygonAnglesSumTheoremSolver.get_n,
+    ("RegularPolygonAngleTheorem", "get_a"): RegularPolygonAngleTheoremSolver.get_a,
+    ("RegularPolygonAngleTheorem", "get_n"): RegularPolygonAngleTheoremSolver.get_n,
+    ("RegularPolygonAreaByCircumscripedCircleTheorem", "get_S"): RegularPolygonAreaByCircumscripedCircleTheoremSolver.get_S,
+    ("RegularPolygonAreaByCircumscripedCircleTheorem", "get_n"): RegularPolygonAreaByCircumscripedCircleTheoremSolver.get_n,
+    ("RegularPolygonAreaByCircumscripedCircleTheorem", "get_a"): RegularPolygonAreaByCircumscripedCircleTheoremSolver.get_a,
+    ("RegularPolygonAreaByCircumscripedCircleTheorem", "get_R"): RegularPolygonAreaByCircumscripedCircleTheoremSolver.get_R,
+    ("RegularPolygonPerimeterTheorem", "get_P"): RegularPolygonPerimeterTheoremSolver.get_P,
+    ("RegularPolygonPerimeterTheorem", "get_a"): RegularPolygonPerimeterTheoremSolver.get_a,
+    ("RegularPolygonPerimeterTheorem", "get_n"): RegularPolygonPerimeterTheoremSolver.get_n,
+    ("PrismAreaTheorem", "get_S"): PrismAreaTheoremSolver.get_S,
+    ("PrismAreaTheorem", "get_Sb"): PrismAreaTheoremSolver.get_Sb,
+    ("PrismAreaTheorem", "get_Ss"): PrismAreaTheoremSolver.get_Ss,
+    ("PrismVolumeTheorem", "get_V"): PrismVolumeTheoremSolver.get_V,
+    ("PrismVolumeTheorem", "get_Sb"): PrismVolumeTheoremSolver.get_Sb,
+    ("PrismVolumeTheorem", "get_h"): PrismVolumeTheoremSolver.get_h,
+    ("CylinderAreaTheorem", "get_S"): CylinderAreaTheoremSolver.get_S,
+    ("CylinderAreaTheorem", "get_R"): CylinderAreaTheoremSolver.get_R,
+    ("CylinderAreaTheorem", "get_h"): CylinderAreaTheoremSolver.get_h,
+    ("ConeAreaTheorem", "get_S"): ConeAreaTheoremSolver.get_S,
+    ("ConeAreaTheorem", "get_R"): ConeAreaTheoremSolver.get_R,
+    ("ConeAreaTheorem", "get_l"): ConeAreaTheoremSolver.get_l,
+    ("ConeVolumeTheorem", "get_V"): ConeVolumeTheoremSolver.get_V,
+    ("ConeVolumeTheorem", "get_R"): ConeVolumeTheoremSolver.get_R,
+    ("ConeVolumeTheorem", "get_h"): ConeVolumeTheoremSolver.get_h,
+    ("SphereAreaTheorem", "get_S"): SphereAreaTheoremSolver.get_S,
+    ("SphereAreaTheorem", "get_R"): SphereAreaTheoremSolver.get_R,
+    ("SphereVolumeTheorem", "get_V"): SphereVolumeTheoremSolver.get_V,
+    ("SphereVolumeTheorem", "get_R"): SphereVolumeTheoremSolver.get_R,
+
+    ("NumberFactorial", "get_fn"): NumberFactorialSolver.get_fn,
+    ("NumberFactorial", "get_n"): NumberFactorialSolver.get_n,
+    ("BinomialCoefficient", "get_Ckn"): BinomialCoefficientSolver.get_Ckn,
+    ("BinomialCoefficient", "get_nfct"): BinomialCoefficientSolver.get_nfct,
+    ("BinomialCoefficient", "get_kfct"): BinomialCoefficientSolver.get_kfct,
+    ("BinomialCoefficient", "get_nminuskfct"): BinomialCoefficientSolver.get_nminuskfct,
+    ("BernoulliProbabilityTheory", "get_Pnk"): BernoulliProbabilityTheorySolver.get_Pnk,
+    ("BernoulliProbabilityTheory", "get_Ckn"): BernoulliProbabilityTheorySolver.get_Ckn,
+    ("BernoulliProbabilityTheory", "get_p"): BernoulliProbabilityTheorySolver.get_p,
+    ("BernoulliProbabilityTheory", "get_q"): BernoulliProbabilityTheorySolver.get_q,
+    ("BernoulliProbabilityTheory", "get_k"): BernoulliProbabilityTheorySolver.get_k,
+    ("BernoulliProbabilityTheory", "get_n"): BernoulliProbabilityTheorySolver.get_n,
+    ("ExpectedValue", "get_MX"): ExpectedValueSolver.get_MX,
 
     ("OhmsSpecificLaw", "get_U"): OhmsSpecificLawSolver.get_U,
     ("OhmsSpecificLaw", "get_I"): OhmsSpecificLawSolver.get_I,
@@ -211,6 +285,25 @@ formulas_map: dict = {
     ("MagneticFluxToContourLaw", "get_B"): MagneticFluxToContourLawSolver.get_B,
     ("MagneticFluxToContourLaw", "get_S"): MagneticFluxToContourLawSolver.get_S,
     ("MagneticFluxToContourLaw", "get_cosa"): MagneticFluxToContourLawSolver.get_cosa,
+    ("SelfInductionFluxLaw", "get_phi"): SelfInductionFluxLawSolver.get_phi,
+    ("SelfInductionFluxLaw", "get_L"): SelfInductionFluxLawSolver.get_L,
+    ("SelfInductionFluxLaw", "get_I"): SelfInductionFluxLawSolver.get_I,
+    ("MagneticFieldEnergyLaw", "get_W"): MagneticFieldEnergyLawSolver.get_W,
+    ("MagneticFieldEnergyLaw", "get_L"): MagneticFieldEnergyLawSolver.get_L,
+    ("MagneticFieldEnergyLaw", "get_I"): MagneticFieldEnergyLawSolver.get_I,
+    ("LentzLaw", "get_Esi"): LentzLawSolver.get_Esi,
+    ("LentzLaw", "get_L"): LentzLawSolver.get_L,
+    ("LentzLaw", "get_DI"): LentzLawSolver.get_DI,
+    ("LentzLaw", "get_Dt"): LentzLawSolver.get_Dt,
+    ("ThomsonsFormula", "get_T"): ThomsonsFormulaSolver.get_T,
+    ("ThomsonsFormula", "get_L"): ThomsonsFormulaSolver.get_L,
+    ("ThomsonsFormula", "get_C"): ThomsonsFormulaSolver.get_C,
+    ("CapacitorElectricChargeLaw", "get_Q"): CapacitorElectricChargeLawSolver.get_Q,
+    ("CapacitorElectricChargeLaw", "get_C"): CapacitorElectricChargeLawSolver.get_C,
+    ("CapacitorElectricChargeLaw", "get_U"): CapacitorElectricChargeLawSolver.get_U,
+    ("ChargedCapacitorEnergyLaw", "get_W"): ChargedCapacitorEnergyLawSolver.get_W,
+    ("ChargedCapacitorEnergyLaw", "get_C"): ChargedCapacitorEnergyLawSolver.get_C,
+    ("ChargedCapacitorEnergyLaw", "get_U"): ChargedCapacitorEnergyLawSolver.get_U,
 
     ("NewtonsSecondLaw", "get_F"): NewtonsSecondLawSolver.get_F,
     ("NewtonsSecondLaw", "get_m"): NewtonsSecondLawSolver.get_m,
@@ -240,6 +333,12 @@ formulas_map: dict = {
     ("MechanicalPowerLaw", "get_P"): MechanicalPowerLawSolver.get_P,
     ("MechanicalPowerLaw", "get_A"): MechanicalPowerLawSolver.get_A,
     ("MechanicalPowerLaw", "get_t"): MechanicalPowerLawSolver.get_t,
+    ("SpringPendulumPeriodLaw", "get_T"): SpringPendulumPeriodLawSolver.get_T,
+    ("SpringPendulumPeriodLaw", "get_m"): SpringPendulumPeriodLawSolver.get_m,
+    ("SpringPendulumPeriodLaw", "get_k"): SpringPendulumPeriodLawSolver.get_k,
+    ("SimplePendulumPeriodLaw", "get_T"): SimplePendulumPeriodLawSolver.get_T,
+    ("SimplePendulumPeriodLaw", "get_l"): SimplePendulumPeriodLawSolver.get_l,
+    ("SimplePendulumPeriodLaw", "get_g"): SimplePendulumPeriodLawSolver.get_g,
     ("MechanicalEfficiencyLaw", "get_eta"): MechanicalEfficiencyLawSolver.get_eta,
     ("MechanicalEfficiencyLaw", "get_Au"): MechanicalEfficiencyLawSolver.get_Au,
     ("MechanicalEfficiencyLaw", "get_At"): MechanicalEfficiencyLawSolver.get_At,
