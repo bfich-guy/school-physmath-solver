@@ -1,4 +1,5 @@
 import os
+import uvicorn
 from fastapi import FastAPI, APIRouter, Request
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -60,3 +61,13 @@ app.mount(
 async def validation_exception_handler(request: Request, exception: RequestValidationError) -> JSONResponse:
     json_responce = JSONResponse({"answer": None})
     return json_responce
+
+
+if __name__ == "__main__":
+    uvicorn.run(
+        "app:app",
+        host="127.0.0.1",
+        port=8000,
+        reload=True,
+    )
+    
