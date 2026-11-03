@@ -3,13 +3,14 @@
     height: fit-content;
     align-self: center;
     border: 4px solid gray;
+    border-radius: 16px;
     padding: 16px;
     margin-top: 1%;
-    font: normal 16px 'Arial';
+    font: normal 16px 'Trebuchet MS';
 }
 
 .formula-searching-input::placeholder {
-    font: normal inherit 'Arial';
+    font: normal inherit 'Trebuchet MS';
 }
 
 .formula-searching-input:focus {
@@ -26,21 +27,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 4px solid gray;
+    border: 2px solid gray;
+    border-radius: 16px;
     margin: 4%;
     background-color: white;
-    
 }
 
 .formula-name {
     color: black;
-    font: bold 24px 'Arial';
+    font: bold 24px 'Trebuchet MS';
     text-align: center;
-    width: 75%;
+    width: 80%;
 }
 
 .formula-object {
-    font: bold 24px 'Arial';
+    font: bold 24px 'Trebuchet MS';
     text-align: center;
     width: 50%;
     padding: 16px;
@@ -54,12 +55,18 @@
 
 .formula-quantity-input-field {
     width: auto;
-    font: bold 16px 'Arial';
+    font: bold 16px 'Trebuchet MS';
     text-align: center;
     color: black;
-    background-color: lightgray;
+    background-color: white;
     border: 1px solid black;
+    border-radius: 8px;
     margin: 2% 2%;
+    padding: 4px;
+}
+
+.formula-quantity-input-field:hover {
+    border: 1px dashed black;
 }
 
 .formula-quantity-input-field:focus {
@@ -76,8 +83,9 @@
     width: auto;
     background-color: lightgray;
     border: 1px solid black;
+    border-radius: 8px;
     color: black;
-    font: bold 24px 'Arial';
+    font: bold 24px 'Trebuchet MS';
     transition: 0.1s;
     padding: 8px;
     margin: 4% 4%;
@@ -90,8 +98,8 @@
 
 .formula-answer-field {
     color: black;
-    background-color: lightgray;
-    font: bold 16px 'Arial';
+    background-color: white;
+    font: bold 16px 'Trebuchet MS';
     margin: 2% 0;
     padding: 16px;
     text-align: center;

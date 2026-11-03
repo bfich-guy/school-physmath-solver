@@ -33,7 +33,7 @@ body {
 
 .solver-title-text {
     color: black;
-    font: bold 32px 'Arial';
+    font: bold 32px 'Trebuchet MS';
     text-align: center;
     margin: 4% 8%;
 }
@@ -41,7 +41,7 @@ body {
 .solver-information-text {
     color: black;
     font-size: 16px;
-    font-family: 'Arial';
+    font-family: 'Trebuchet MS';
     text-align: left;
     margin: 4% 8%;
 }
@@ -49,7 +49,7 @@ body {
 .solver-copyright-text {
     color: black;
     font-size: 24px;
-    font-family: 'Arial';
+    font-family: 'Trebuchet MS';
     text-align: left;
     padding: 8px;
 }
@@ -63,7 +63,7 @@ body {
 .solver-header-link {
     display: inline-block;
     color: black;
-    font: normal 16px 'Arial';
+    font: normal 16px 'Trebuchet MS';
     text-align: center;
     text-decoration: none;
     padding: 16px 0;
@@ -73,7 +73,7 @@ body {
 .solver-header-subject-title {
     display: inline-block;
     color: black;
-    font: bold 16px 'Arial';
+    font: bold 16px 'Trebuchet MS';
     text-align: center;
     width: fit-content;
 }
@@ -98,7 +98,7 @@ body {
 .solver-footer-column-title {
     color: black;
     font-size: 24px;
-    font-family: 'Arial';
+    font-family: 'Trebuchet MS';
     text-align: center;
     text-decoration: none;
     padding-top: 16px;
@@ -113,7 +113,7 @@ body {
 .solver-footer-link {
     color: black;
     font-size: 24px;
-    font-family: 'Arial';
+    font-family: 'Trebuchet MS';
     text-align: left;
     text-decoration: none;
     padding: 8px;
