@@ -60,4 +60,3 @@ app.mount(
 async def validation_exception_handler(request: Request, exception: RequestValidationError) -> JSONResponse:
     json_responce = JSONResponse({"answer": None})
     return json_responce
-    
