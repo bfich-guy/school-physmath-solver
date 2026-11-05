@@ -323,12 +323,12 @@ class ThomsonsFormula:
 
 
     def get_L(self, *, T: Decimal, pi: Decimal, C: Decimal) -> Decimal:
-        L: Decimal = (T * Decimal("2")) / (Decimal("4") * pi ** Decimal("2") * C)
+        L: Decimal = (T ** Decimal("2")) / (Decimal("4") * pi ** Decimal("2") * C)
         return L
 
 
     def get_C(self, *, T: Decimal, pi: Decimal, L: Decimal) -> Decimal:
-        C: Decimal = (T * Decimal("2")) / (Decimal("4") * pi ** Decimal("2") * L)
+        C: Decimal = (T ** Decimal("2")) / (Decimal("4") * pi ** Decimal("2") * L)
         return C
 
 
