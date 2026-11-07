@@ -3,9 +3,8 @@
     height: fit-content;
     align-self: center;
     border: 4px solid gray;
-    border-radius: 16px;
-    padding: 16px;
-    margin-top: 1%;
+    padding: 8px;
+    margin: 1% 0;
     font: normal 16px 'Trebuchet MS';
 }
 
@@ -20,6 +19,10 @@
 .formulas-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    overflow-y: auto;
+    scrollbar-width: thick;
+    scrollbar-color: white transparent;
+    height: fit-content;
 }
 
 .formula-card {
@@ -27,7 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid gray;
+    border: 4px solid gray;
     border-radius: 16px;
     margin: 4%;
     background-color: white;
@@ -35,15 +38,14 @@
 
 .formula-name {
     color: black;
-    font: bold 24px 'Trebuchet MS';
+    font: bold 16px 'Trebuchet MS';
     text-align: center;
     width: 80%;
 }
 
 .formula-object {
-    font: bold 24px 'Trebuchet MS';
+    font: bold 20px 'Trebuchet MS';
     text-align: center;
-    width: 50%;
     padding: 16px;
     color: black;
 }
@@ -61,7 +63,7 @@
     background-color: white;
     border: 1px solid black;
     border-radius: 8px;
-    margin: 2% 2%;
+    margin: 1% 1%;
     padding: 4px;
 }
 
@@ -85,7 +87,7 @@
     border: 1px solid black;
     border-radius: 8px;
     color: black;
-    font: bold 24px 'Trebuchet MS';
+    font: bold 16px 'Trebuchet MS';
     transition: 0.1s;
     padding: 8px;
     margin: 4% 4%;
@@ -108,11 +110,6 @@
 
 @media (max-width: 768px) {
     .formulas-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .solver-footer-menu {
-        display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
 }
