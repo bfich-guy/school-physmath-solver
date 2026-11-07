@@ -57,7 +57,7 @@
 
 .formula-quantity-input-field {
     width: auto;
-    font: bold 16px 'Trebuchet MS';
+    font: bold 10px 'Trebuchet MS';
     text-align: center;
     color: black;
     background-color: white;
@@ -101,7 +101,7 @@
 .formula-answer-field {
     color: black;
     background-color: white;
-    font: bold 16px 'Trebuchet MS';
+    font: bold 12px 'Trebuchet MS';
     margin: 2% 0;
     padding: 16px;
     text-align: center;
