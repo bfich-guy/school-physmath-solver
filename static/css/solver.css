@@ -4,8 +4,9 @@ body {
 }
 
 .solver-header-background {
-    background-image: linear-gradient(lightgray, darkgray);
-    border-bottom: 4px solid darkgray;
+    background-color: lightseagreen;
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 0 8px 8px lightgray;
 }
 
 .solver-main-background {
@@ -13,17 +14,15 @@ body {
 }
 
 .solver-footer-background {
-    background-image: linear-gradient(lightgray, darkgray);
+    background-color: lightseagreen;
+    border-radius: 32px 32px 0 0;
+    box-shadow: 0 0 8px 8px lightgray;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .solver-physmath-background {
-    background-image: url("/static/images/physmath_background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; 
-    background-attachment: fixed;
+    background-color: white;
 }
 
 .solver-physmath-logo-background {
@@ -31,25 +30,31 @@ body {
     height: 200px;
 }
 
+.solver-information-card {
+    background-color: white;
+    border-radius: 16px;
+    margin: 4% 8%;
+    box-shadow: 0 0 16px gray;
+}
+
 .solver-title-text {
     color: black;
-    font: bold 32px 'Trebuchet MS';
+    font: bold 32px 'Arial Black';
     text-align: center;
-    margin: 4% 8%;
+    padding: 16px;
 }
 
 .solver-information-text {
     color: black;
-    font-size: 16px;
-    font-family: 'Trebuchet MS';
+    font: normal 20px 'Arial';
     text-align: left;
-    margin: 4% 8%;
+    margin: 2%;
+    padding: 16px;
 }
 
 .solver-copyright-text {
-    color: black;
-    font-size: 24px;
-    font-family: 'Trebuchet MS';
+    color: white;
+    font: normal 24px 'Arial Black';;
     text-align: left;
     padding: 8px;
 }
@@ -62,24 +67,25 @@ body {
 
 .solver-header-link {
     display: inline-block;
-    color: black;
-    font: normal 16px 'Trebuchet MS';
+    color: white;
+    font: normal 16px 'Arial Black';
     text-align: center;
     text-decoration: none;
     padding: 16px 0;
     width: fit-content;
 }
 
-.solver-header-subject-title {
-    display: inline-block;
-    color: black;
-    font: bold 16px 'Trebuchet MS';
-    text-align: center;
-    width: fit-content;
+.solver-header-link:hover {
+    text-decoration: solid underline;
 }
 
-.solver-header-link:hover {
-    color: dimgray;
+.solver-header-subject-title {
+    display: inline-block;
+    color: white;
+    font: bold 16px 'Arial Black';
+    text-align: center;
+    width: fit-content;
+    text-decoration: solid underline;
 }
 
 .solver-header-subject-menu-card {
@@ -96,9 +102,8 @@ body {
 }
 
 .solver-footer-column-title {
-    color: black;
-    font-size: 24px;
-    font-family: 'Trebuchet MS';
+    color: white;
+    font: bold 24px 'Arial Black';
     text-align: center;
     text-decoration: none;
     padding-top: 16px;
@@ -111,9 +116,8 @@ body {
 }
 
 .solver-footer-link {
-    color: black;
-    font-size: 24px;
-    font-family: 'Trebuchet MS';
+    color: white;
+    font: bold 16px 'Arial Black';
     text-align: left;
     text-decoration: none;
     padding: 8px;
@@ -121,14 +125,5 @@ body {
 }
 
 .solver-footer-link:hover {
-    color: dimgray;
-}
-
-
-@media (max-width: 768px) {
-    .solver-header-links {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin: 2% 2%;
-    }
+    text-decoration: solid underline;
 }

@@ -2,15 +2,15 @@
     width: 50%;
     height: fit-content;
     align-self: center;
-    border: 4px solid gray;
+    border: 4px solid white;
     border-radius: 16px;
     padding: 16px;
-    margin-top: 1%;
-    font: normal 16px 'Trebuchet MS';
+    margin: 1% 0;
+    font: normal 16px 'Arial';
 }
 
 .formula-searching-input::placeholder {
-    font: normal inherit 'Trebuchet MS';
+    font: normal inherit 'Arial';
 }
 
 .formula-searching-input:focus {
@@ -20,6 +20,7 @@
 .formulas-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: 2% 0;
 }
 
 .formula-card {
@@ -27,25 +28,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid gray;
     border-radius: 16px;
     margin: 4%;
-    background-color: white;
+    background-image: linear-gradient(white, lightgray);
+    border: 2px solid black;
+    box-shadow: 0 0 8px 8px lightgray;
+}
+
+.formula-card:hover {
+    border: 2px dashed black;
 }
 
 .formula-name {
     color: black;
-    font: bold 24px 'Trebuchet MS';
+    border-bottom: 2px solid black;
+    font: bold 24px 'Arial';
+    padding: 4px;
     text-align: center;
     width: 80%;
 }
 
 .formula-object {
-    font: bold 24px 'Trebuchet MS';
+    font: bold 24px 'Arial';
     text-align: center;
     width: 50%;
     padding: 16px;
     color: black;
+}
+
+.formula-object math {
+    font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", math;
 }
 
 .formula-quantities-inputs-card {
@@ -55,18 +67,22 @@
 
 .formula-quantity-input-field {
     width: auto;
-    font: bold 16px 'Trebuchet MS';
+    font: bold 16px 'Arial';
     text-align: center;
     color: black;
     background-color: white;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 8px;
     margin: 2% 2%;
     padding: 4px;
 }
 
 .formula-quantity-input-field:hover {
-    border: 1px dashed black;
+    border: 2px dashed black;
+}
+
+.formula-quantity-input-field::placeholder {
+    color: black;
 }
 
 .formula-quantity-input-field:focus {
@@ -81,11 +97,11 @@
 
 .formula-quantity-button {
     width: auto;
-    background-color: lightgray;
-    border: 1px solid black;
+    background-color: lightseagreen;
+    border: 2px solid black;
     border-radius: 8px;
     color: black;
-    font: bold 24px 'Trebuchet MS';
+    font: bold 24px 'Arial';
     transition: 0.1s;
     padding: 8px;
     margin: 4% 4%;
@@ -93,26 +109,15 @@
 
 .formula-quantity-button:hover {
     cursor: pointer;
-    border: 1px solid lightgray;
+    scale: 1.1;
 }
 
 .formula-answer-field {
     color: black;
-    background-color: white;
-    font: bold 16px 'Trebuchet MS';
+    border-radius: 16px;
+    font: bold 16px 'Arial';
     margin: 2% 0;
     padding: 16px;
     text-align: center;
     width: 75%;
-}
-
-@media (max-width: 768px) {
-    .formulas-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .solver-footer-menu {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
 }
