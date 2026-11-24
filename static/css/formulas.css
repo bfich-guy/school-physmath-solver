@@ -30,18 +30,14 @@
     align-items: center;
     border-radius: 16px;
     margin: 4%;
-    background-image: linear-gradient(white, lightgray);
-    border: 2px solid black;
+    background-color: lightseagreen;
     box-shadow: 0 0 8px 8px lightgray;
 }
 
-.formula-card:hover {
-    border: 2px dashed black;
-}
-
 .formula-name {
-    color: black;
-    border-bottom: 2px solid black;
+    color: white;
+    background-color: darkcyan;
+    border-radius: 8px;
     font: bold 24px 'Arial';
     padding: 4px;
     text-align: center;
@@ -51,9 +47,11 @@
 .formula-object {
     font: bold 24px 'Arial';
     text-align: center;
-    width: 50%;
+    width: 80%;
     padding: 16px;
     color: black;
+    background-color: white;
+    border-radius: 8px;
 }
 
 .formula-object math {
@@ -63,58 +61,73 @@
 .formula-quantities-inputs-card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: auto 0;
 }
 
 .formula-quantity-input-field {
     width: auto;
     font: bold 16px 'Arial';
     text-align: center;
-    color: black;
-    background-color: white;
-    border: 2px solid black;
+    color: white;
+    background-color: darkcyan;
+    border: none;
     border-radius: 8px;
     margin: 2% 2%;
     padding: 4px;
 }
 
 .formula-quantity-input-field:hover {
-    border: 2px dashed black;
+    background-color: white;
+    color: black;
 }
 
 .formula-quantity-input-field::placeholder {
-    color: black;
+    color: white;
 }
 
 .formula-quantity-input-field:focus {
     outline: none;
 }
 
+.formula-quantity-input-field:hover::placeholder{
+    color: black;
+}
+
 .formula-quantities-buttons-card {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
 }
 
 .formula-quantity-button {
-    width: auto;
-    background-color: lightseagreen;
-    border: 2px solid black;
+    width: 50%;
+    background-image: linear-gradient(white, lightgray);
+    border: none;
     border-radius: 8px;
     color: black;
     font: bold 24px 'Arial';
     transition: 0.1s;
     padding: 8px;
     margin: 4% 4%;
+    box-shadow: 0px 4px 4px black;
 }
 
 .formula-quantity-button:hover {
     cursor: pointer;
-    scale: 1.1;
+    scale: 0.95;
+    box-shadow: 0px 3px 3px black;
+}
+
+.formula-quantity-button:active {
+    scale: 0.8;
+    box-shadow: none;
 }
 
 .formula-answer-field {
     color: black;
-    border-radius: 16px;
+    background-color: white;
+    border-radius: 8px;
     font: bold 16px 'Arial';
     margin: 2% 0;
     padding: 16px;
